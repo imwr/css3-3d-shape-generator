@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Css3 3d Shape Generator —— 颜色变换插件，可改变文字、背景、边框颜色</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta name="keywords" content="tt-cc"/>
+    <meta name="description" content="tt-cc"/>
+    <meta http-equiv="Cache-Control" content="no-transform "/>
+    <link rel="shortcut icon" href="http://imwr.github.io/resources/favicon.ico">
+    <link rel="bookmark" href="http://imwr.github.io/resources/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/github-example.css">
+    <script type="text/javascript" src="http://imwr.github.io/resources/js/jquery-1.11.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://imwr.github.io/resources/syntax/shCoreDefault.css"/>
+</head>
+<body>
+<header>
+    <div class="main-inner">
+        <a href="https://github.com/imwr/ColorChange" target="_blank" class="button">
+            <small>View project on</small>
+            GitHub</a>
+
+        <h1>Imwr</h1>
+    </div>
+</header>
+<section class="main-inner">
+    <div class="paper-title">wait a moment ... </div>
+</section>
+<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shCore.js"></script>
+<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shBrushJScriptAndXml.js"></script>
+<section class="main-inner hide" id="share-comment">
+    <br/>
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style">
+        <span class="jiathis_txt">分享到：</span>
+        <a class="jiathis_button_weixin">微信</a>
+        <a class="jiathis_button_tsina">新浪微博</a>
+        <a class="jiathis_button_qzone">QQ空间</a>
+        <a class="jiathis_button_cqq">QQ好友</a>
+        <a class="jiathis_button_fav">收藏夹</a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+           target="_blank">更多</a>
+    </div>
+    <!-- JiaThis Button END -->
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+</section>
+<script>
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }, disqus_config = function () {
+        this.page.url = location.href; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    setTimeout(function () {
+        var d = document, share = d.createElement('script'), dis = d.createElement('script');
+        // add jiathis
+        share.src = '//v3.jiathis.com/code/jia.js';
+        // add disqus
+        dis.src = '//tt-cc.disqus.com/embed.js';
+        dis.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(share).appendChild(dis);
+        $("#share-comment").show();
+    }, 1000);
+</script>
+</body>
+</html>
