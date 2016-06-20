@@ -7,7 +7,16 @@ var randomColor = function () {
 var Shape = {
     cube: function (params, cls) {
         var c = "." + cls,
+            w = params.w || 100,
+            h = params.h || 100,
+            v = params.v || 100;
         var html = '<div class="' + cls + '">\n' +
+            '    <div class="tcface top"></div>\n' +
+            '    <div class="tcface left"></div>\n' +
+            '    <div class="tcface front"></div>\n' +
+            '    <div class="tcface bottom"></div>\n' +
+            '    <div class="tcface right"></div>\n' +
+            '    <div class="tcface back"></div>\n' +
             '</div>';
         var style = {};
         style[c] = {
@@ -16,6 +25,7 @@ var Shape = {
             "transform-style": "preserve-3d",
             position: "absolute"
         };
+        style[c + " .tcface"] = {
             width: "100%",
             height: "100%",
             position: "absolute"
