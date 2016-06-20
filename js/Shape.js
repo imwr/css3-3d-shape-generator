@@ -1,5 +1,61 @@
+var randomColor = function () {
+    return '#' + (function (color) {
+            return (color += '0123456789abcdef'[Math.floor(Math.random() * 16)])
+            && (color.length == 6) ? color : arguments.callee(color);
+        })('');
+};
 var Shape = {
-    cube: function () {},
+    cube: function (params, cls) {
+        var c = "." + cls,
+        var html = '<div class="' + cls + '">\n' +
+            '</div>';
+        var style = {};
+        style[c] = {
+            width: w + "px",
+            height: h + "px",
+            "transform-style": "preserve-3d",
+            position: "absolute"
+        };
+            width: "100%",
+            height: "100%",
+            position: "absolute"
+        };
+        style[c + " .top"] = {
+            background: randomColor(),
+            transform: "rotateX(0deg) translateZ(" + v + "px)"
+        };
+        style[c + " .bottom"] = {
+            background: randomColor()
+        };
+        style[c + " .right"] = {
+            background: randomColor(),
+            transform: "rotateY(90deg) rotatez(-90deg) translateZ(" + w + "px) translateX(" + (v - h) + "px)",
+            "transform-origin": "0 100%",
+            width: h + "px",
+            height: v + "px"
+        };
+        style[c + " .left"] = {
+            background: randomColor(),
+            transform: "rotateY(-90deg) rotateZ(90deg) translateY(-" + v + "px)",
+            "transform-origin": "0 0",
+            width: h + "px",
+            height: v + "px"
+        };
+        style[c + " .back"] = {
+            background: randomColor(),
+            transform: "rotateX(90deg) rotatez(180deg) translateY(-" + v / 2 + "px) translateZ(" + v / 2 + "px)",
+            height: v + "px"
+        };
+        style[c + " .front"] = {
+            background: randomColor(),
+            transform: "rotateX(-90deg) translateY(-" + v / 2 + "px) translateZ(" + (h - v / 2) + "px)",
+            height: v + "px"
+        };
+        return {
+            style: style,
+            html: html
+        };
+    },
     pyramid: function () {},
     cylinder: function () {},
     prism: function () {},
@@ -7,4 +63,4 @@ var Shape = {
     fan: function () {},
     polyhedral: function () {},
     ladder: function () {}
-}
+};

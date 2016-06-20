@@ -1,0 +1,147 @@
+form {
+    line-height: 40px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 20px;
+    display: none;
+}
+
+select, input:not([type=radio]) {
+    padding: 8px 6px;
+    border-radius: 2px;
+    box-shadow: none !important;
+    color: #858585;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+}
+
+input[disabled=disabled] {
+    background: #f2f2f2;
+}
+
+button {
+    display: inline-block;
+    color: #FFF !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25) !important;
+    border-radius: 0;
+    box-shadow: none !important;
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    background-color: red;
+}
+
+button.normal {
+    background-color: #abbac3;
+    margin-left: 40px;
+}
+
+button:hover {
+    background-color: #ee9277 !important;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin: 10px 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s;
+    width: 100%;
+}
+
+.control-label {
+    width: 25%;
+    line-height: 36px;
+}
+
+.control-content {
+    width: 75%;
+    display: block;
+    float: right;
+}
+
+.animated {
+    transform-style: preserve-3d;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.box-header {
+    padding: 15px;
+    text-align: center;
+    background: white;
+    cursor: pointer;
+    font-size: 28px;
+    text-shadow: 1px 1px #efefef, 2px 2px #aee2d9;
+}
+
+#type {
+    opacity: 1;
+    transition: all 0.4s linear;
+    position: absolute;
+    top: 83px;
+    left: 0;
+    background: white;
+    visibility: visible;
+    z-index: -1;
+    border: 1px solid #e0dbdb;
+    padding-bottom: 10px;
+}
+
+#type.out {
+    opacity: 0;
+    top: -50px;
+    visibility: hidden;
+}
+
+#type .box-item {
+    width: calc(50% - 15px);
+    padding: 15px;
+    font-size: 14px;
+    background: #f1f1f1;
+    border: 1px solid #d1d1d1;
+    height: 130px;
+    cursor: pointer;
+    float: left;
+    margin: 10px 0 0 10px;
+    text-align: center;
+}
+
+.box-item img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box-item:hover {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+#content {
+    transition: all 0.3s linear;
+    position: absolute;
+    opacity: 0;
+    top: -50px;
+    visibility: hidden;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    z-index: -1;
+    border: 1px solid #e0dbdb;
+}
+
+#content.in {
+    opacity: 1;
+    top: 83px;
+    visibility: visible;
+    transition-delay: 0.4s;
+}

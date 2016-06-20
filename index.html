@@ -17,13 +17,17 @@
 
     <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/github-example.css">
-    <script type="text/javascript" src="http://imwr.github.io/resources/js/jquery-1.11.3.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://imwr.github.io/resources/syntax/shCoreDefault.css"/>
+    <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/jsonFormatter/jsonFormatter.css">
+    <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/rangeslider/rangeslider.css">
+
+    <link rel="stylesheet" type="text/css" href="css/generator.css">
+    <style id="boxstyle"></style>
 </head>
+<body>
 <body>
 <header>
     <div class="main-inner">
-        <a href="https://github.com/imwr/ColorChange" target="_blank" class="button">
+        <a href="https://github.com/imwr/css3-3d-shape-generator" target="_blank" class="button">
             <small>View project on</small>
             GitHub</a>
 
@@ -31,29 +35,235 @@
     </div>
 </header>
 <section class="main-inner">
-    <div class="paper-title">wait a moment ... </div>
-</section>
-<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shCore.js"></script>
-<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shBrushJScriptAndXml.js"></script>
-<section class="main-inner hide" id="share-comment">
-    <br/>
-    <!-- JiaThis Button BEGIN -->
-    <div class="jiathis_style">
-        <span class="jiathis_txt">分享到：</span>
-        <a class="jiathis_button_weixin">微信</a>
-        <a class="jiathis_button_tsina">新浪微博</a>
-        <a class="jiathis_button_qzone">QQ空间</a>
-        <a class="jiathis_button_cqq">QQ好友</a>
-        <a class="jiathis_button_fav">收藏夹</a>
-        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
-           target="_blank">更多</a>
+    <div class="box-header" id="typemenu">
+        Css3 3d Shape Generator
+        <div></div>
     </div>
-    <!-- JiaThis Button END -->
-    <br/>
-    <br/>
+    <div class="col-12" id="type">
+        <div class="box-item" data-type="cube">
+            <img src="images/cube.png"/>
+            <span>立方体 Cube</span>
+        </div>
+        <div class="box-item" data-type="pyramid">
+            <img src="images/cube.png"/>
+            <span>金字塔 Pyramid</span>
+        </div>
+        <div class="box-item" data-type="prism">
+            <img src="images/cube.png"/>
+            <span>棱柱 Prism</span>
+        </div>
+        <div class="box-item" data-type="polyhedron">
+            <img src="images/cube.png"/>
+            <span>多Face 框 Polyhedron</span>
+        </div>
+        <div class="box-item" data-type="fan">
+            <img src="images/cube.png"/>
+            <span>扇叶 Fan-blade</span>
+        </div>
+        <div class="box-item" data-type="sphere">
+            <img src="images/cube.png" class="text-center"/>
+            <span>球体 Sphere</span>
+        </div>
+        <div class="box-item" data-type="cylinder">
+            <img src="images/cube.png"/>
+            <span>圆柱体 Cylinder</span>
+        </div>
+        <div class="box-item" data-type="ladder">
+            <img src="images/cube.png"/>
+            <span>阶梯 Ladder</span>
+        </div>
+        <div class="clearfix"></div>
+        <section class="padding-l hide" id="share-comment">
+            <br/>
+            <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style">
+                <span class="jiathis_txt">分享到：</span>
+                <a class="jiathis_button_weixin">微信</a>
+                <a class="jiathis_button_tsina">新浪微博</a>
+                <a class="jiathis_button_qzone">QQ空间</a>
+                <a class="jiathis_button_cqq">QQ好友</a>
+                <a class="jiathis_button_fav">收藏夹</a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+                   target="_blank">更多</a>
+            </div>
+            <!-- JiaThis Button END -->
+            <br/>
+            <br/>
 
-    <div id="disqus_thread"></div>
+            <div id="disqus_thread"></div>
+        </section>
+    </div>
+    <div id="content">
+        <form id="commonform">
+            <div class="col-12">
+                <label class="control-label">ClassName:</label>
+                <input type="text" class="control-content" placeholder="default box-{type}..." name="c"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Length:</label>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Width:</label>
+                <input type="text" maxlength="6" name="h" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\,]/g,'')"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Height:</label>
+                <input type="text" maxlength="6" name="v" placeholder="default 100..."
+                       class="control-content"/>
+            </div>
+        </form>
+        <form id="pyramid">
+            <div class="col-12">
+                <label class="control-label">ClassName:</label>
+                <input type="text" class="control-content" placeholder="default box-{type}..." name="c"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Length:</label>
+                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Height:</label>
+                <input type="text" maxlength="6" name="v" placeholder="default 200..."
+                       class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Face :</label>
+                <input type="text" maxlength="6" name="s" placeholder="Face，default 4..."
+                       class="control-content"/>
+            </div>
+        </form>
+        <form id="polyhedron">
+            <div class="col-12">
+                <label class="control-label">ClassName:</label>
+                <input type="text" class="control-content" placeholder="default box-{type}..." name="c"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Length:</label>
+                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Height:</label>
+                <input type="text" maxlength="6" name="v" placeholder="default 200..."
+                       class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Face :</label>
+                <input type="text" maxlength="6" name="s" placeholder="default 5..."
+                       class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Angle:</label>
+                <input type="text" maxlength="6" name="a" placeholder="default 0deg..."
+                       class="control-content"/>
+            </div>
+        </form>
+        <form id="fan">
+            <div class="col-12">
+                <label class="control-label">ClassName:</label>
+                <input type="text" class="control-content" placeholder="default box-{type}..." name="c"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Length:</label>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Height:</label>
+                <input type="text" maxlength="6" name="v" placeholder="default 100..."
+                       class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Face :</label>
+                <input type="text" maxlength="6" name="s" placeholder="default 5..."
+                       class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Angle:</label>
+                <input type="text" maxlength="6" name="a" placeholder="default 60deg..."
+                       class="control-content col-6"/>
+                <label class="control-toolbar">
+                    &nbsp;&nbsp;<input type="checkbox" maxlength="6" name="auto" class=""/>&nbsp;Auto Pyramid
+                </label>
+            </div>
+        </form>
+        <form id="sphere">
+            <div class="col-12">
+                <label class="control-label">ClassName:
+                    <input type="text" class="control-content" placeholder="default box-{type}..." name="c"/>
+                </label>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Diameter:</label>
+                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Face:</label>
+                <input type="text" max="180" name="s" placeholder="default 180..."
+                       class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Random Color:</label>
+                <select name="color" class="control-content">
+                    <option value="1" selected>Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+        </form>
+        <form id="cylinder">
+            <div class="col-12">
+                <label class="control-label">ClassName:</label>
+                <input type="text" class="control-content" placeholder="default box-{type}..." name="c"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Outer Diameter:</label>
+                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Inner Diameter:</label>
+                <input type="text" maxlength="6" name="sw" placeholder="default 160..." class="control-content"/>
+            </div>
+            <div class="col-12">
+                <label class="control-label">Face:</label>
+                <input type="text" maxlength="6" name="s" placeholder="default 100..."
+                       class="control-content"/>
+            </div>
+        </form>
+        <h3>Preview</h3>
+
+        <div id="boxdemo" class="animated"></div>
+        <div class="col-12">
+            <label class="control-label">RotateX(<span>10</span>deg)</label>
+
+            <label class="control-content">
+                <input type="range" min="0" max="360" step="1" value="10" data-rangeslider id="rangex"/>
+            </label>
+        </div>
+        <div class="col-12">
+            <label class="control-label">RotateY(<span>0</span>deg)</label>
+
+            <label class="control-content">
+                <input type="range" min="0" max="360" step="1" value="0" data-rangeslider id="rangey"/>
+            </label>
+        </div>
+        <div class="col-12">
+            <label class="control-label">RotateZ(<span>30</span>deg)</label>
+
+            <label class="control-content">
+                <input type="range" min="0" max="360" step="1" value="30" data-rangeslider id="rangez"/>
+            </label>
+        </div>
+        <h3>html</h3>
+        <pre id="codehtml" contenteditable="true">（Empty）</pre>
+        <h3>css</h3>
+        <pre id="codecss" contenteditable="true">（Empty）</pre>
+    </div>
 </section>
+<script type="text/javascript" src="http://imwr.github.io/resources/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://imwr.github.io/resources/rangeslider/rangeslider.min.js"></script>
+<script type="text/javascript" src="http://imwr.github.io/resources/jsonFormatter/jsonFormatter.js"></script>
+<script type="text/javascript" src="js/Shape.js"></script>
+<script type="text/javascript" src="js/generator.js"></script>
 <script>
     var jiathis_config = {
         summary: "",
