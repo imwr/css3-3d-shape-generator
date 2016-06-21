@@ -35,6 +35,7 @@ $(document).ready(function () {
             }
             typemenu.removeClass("generante");
             content.removeClass("in");
+            $("#code").removeClass("open");
             setTimeout(function () {
                 typediv.removeClass("out");
             }, 300);
@@ -68,10 +69,9 @@ $(document).ready(function () {
             clearTimeout(timeout);
         }, 500);
     });
-    $("#getcode").click(function () {
+    $(".getcode").click(function () {
         var code = $("#code");
         if (!code.hasClass("open")) {
-            this.textContent = "Back Preview";
             var css = "", p = "\n";
             for (var k in style) {
                 css += k + " {" + p;
@@ -81,14 +81,12 @@ $(document).ready(function () {
                 }
                 css += " }" + p
             }
-            code.empty().append('<h3>html</h3>')
+            code.find(".paper-content").empty().append('<div class="paper-title">html</div>')
                 .append('<pre class="brush: html;class-name: paper-code;" contenteditable="true"></pre>')
-                .append('<h3>css</h3>')
-                .append('<pre contenteditable="true" class="brush: css;toolbar: true;class-name: paper-code;"></pre>');
-            code.find("pre").eq(0).text(html).end().eq(1).text(css);
+                .append('<div class="paper-title">css</div>')
+                .append('<pre contenteditable="true" class="brush: css;toolbar: true;class-name: paper-code;"></pre>')
+                .find("pre").eq(0).text(html).end().eq(1).text(css);
             SyntaxHighlighter.highlight();
-        } else {
-            this.textContent = "Get Code";
         }
         boxdemo.toggleClass("open");
         code.toggleClass("open");

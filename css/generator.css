@@ -221,9 +221,9 @@ pre {
 #content.in {
     opacity: 1;
     top: 83px;
-    visibility: visible;
     transition-delay: 0.4s;
     line-height: 42px;
+    visibility: visible;
 }
 
 #boxdemo {
@@ -235,12 +235,20 @@ pre {
 
 #code {
     transition: all 0.3s linear;
-    position: relative;
     height: 0;
     opacity: 0;
+    position: absolute;
+    top: 83px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #e0dbdb;
+    margin-bottom: 20px;
+    visibility: hidden;
+    line-height: 42px;
 }
 
 #code.open, #boxdemo.open {
     opacity: 1;
     height: auto;
+    visibility: visible;
 }
