@@ -26,28 +26,32 @@ $(document).ready(function () {
         });
         return o;
     };
-    var timeout = null, form = $("#form"), type;
-    $("#typemenu").click(function () {
-        $("#content").removeClass("in");
-        setTimeout(function () {
-            $("#type").removeClass("out");
-        }, 400);
-        form.hide();
-    });
-    $("#type").on("click", ".box-item", function () {
-        type = this.getAttribute("data-type");
-        if(type!="cube") {
-            return alert("Developing, Wait Please ...")
-        }
-        var dataForm = this.getAttribute("data-form");
-        form = $("#" + (dataForm || type)).show();
-        if (form.length == 0) {
-            form = $("#commonform").show();
-        }
-        $("#type").addClass("out");
-        $("#content").addClass("in");
-        dopackage();
-    }).change();
+    var timeout = null, form = $("#commonform"), type;
+    var content = $("#content"),
+        typediv = $("#type").on("click", ".box-item", function () {
+            type = this.getAttribute("data-type");
+            if (!type) return;
+            var dataForm = this.getAttribute("data-form");
+            form = $("#" + (dataForm || type)).show();
+            if (form.length == 0) {
+                form = $("#commonform").show();
+            }
+            typediv.addClass("out").find(".shape-demo").removeClass("animate");
+            content.addClass("in");
+            typemenu.addClass("generante").find(".generante").text("Generate 【" + type + "】");
+            dopackage();
+        }),
+        typemenu = $("#typemenu").click(function () {
+            if (!typemenu.hasClass("generante")) {
+                return typediv.find(".shape-demo").toggleClass("animate");
+            }
+            typemenu.removeClass("generante");
+            content.removeClass("in");
+            setTimeout(function () {
+                typediv.removeClass("out");
+            }, 300);
+            form.hide();
+        });
     $("form").on("input", "input", function () {
         if (this.name != "c") {
             this.value = this.value.replace(/[^\d|\.]/g, '');
@@ -76,14 +80,19 @@ $(document).ready(function () {
             clearTimeout(timeout);
         }, 500);
     });
+    var codehtml = $("#codehtml"),
+        boxdemo = $("#boxdemo"),
+        codecss = $("#codecss"),
+        boxstyle = $("#boxstyle");
+
     function dopackage() {
         var params = form.serializeObject(), cls = params.c || ("shape-" + type);
         var pack = Shape[type || "cube"](params, cls);
         if (!pack) {
-            $("#codehtml").empty();
-            $("#boxdemo").empty();
-            $("#codecss").empty();
-            $("#boxstyle").empty();
+            codehtml.empty();
+            boxdemo.empty();
+            codecss.empty();
+            boxstyle.empty();
             return;
         }
         var style = pack.style,
@@ -97,14 +106,14 @@ $(document).ready(function () {
             }
             css += " }" + p
         }
-        $("#codehtml").text(html);
-        $("#boxdemo").css({
+        codehtml.text(html);
+        boxdemo.css({
             "height": (params.h || params.v || 200) + 40,
             "width": (params.w || 200) + 40,
             "transform": ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
             "deg) rotateZ(" + $("#rangez").val() + "deg)")
         }).html(html.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
-        $("#codecss").html(css);
-        $("#boxstyle").empty().html(css.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
+        codecss.html(css);
+        boxstyle.empty().html(css.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
     }
 });

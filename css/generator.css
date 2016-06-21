@@ -75,18 +75,78 @@ pre {
     padding: 20px;
 }
 
-.box-header {
-    padding: 15px;
+#typemenu {
     text-align: center;
     background: white;
+    padding: 15px;
     cursor: pointer;
     font-size: 28px;
     text-shadow: 1px 1px #efefef, 2px 2px #aee2d9;
+    color: #222;
+    position: relative;
+}
+
+#typemenu .menu {
+    transform: scale(1);
+    left: 0;
+    transition: all 0.3s linear;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+
+#typemenu .generante {
+    transform: scale(0);
+    transition: all 0.3s linear;
+    position: absolute;
+    width: 100%;
+}
+
+#typemenu .menu:before {
+    background: #222;
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 4px;
+    left: 0;
+    top: 10px;
+    box-shadow: 0 8px #222, 0 16px #222;
+}
+
+#typemenu .generante:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: 12px;
+    border-right: 12px solid #222;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+}
+
+#typemenu .generante:after {
+    background: #222;
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 8px;
+    left: 12px;
+    top: 17px;
+}
+
+#typemenu.generante .generante {
+    transform: scale(1);
+}
+
+#typemenu.generante .menu {
+    left: -960px;
+    opacity: 0;
 }
 
 #type {
     opacity: 1;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
     position: absolute;
     top: 83px;
     left: 0;
@@ -99,7 +159,7 @@ pre {
 
 #type.out {
     opacity: 0;
-    top: -50px;
+    top: -80px;
     visibility: hidden;
 }
 
@@ -114,23 +174,51 @@ pre {
     float: left;
     margin: 10px 0 0 10px;
     text-align: center;
+    transition: all 0.3s linear;
+    position: relative;
 }
 
-.box-item img {
+#type .box-item .shape-demo {
     margin: 0 auto;
-    text-align: center;
+    max-height: 50px;
+    transform: rotateX(75deg) rotateZ(45deg);
+    transition: all 2s linear;
 }
 
-.box-item:hover {
+#type .box-item .shape-text {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    left: 0;
+    color: #347cd0;
+    text-shadow: 1px 1px 0 #d0ddec;
+}
+
+#type .box-item:hover {
     background: #ddd;
     border-radius: 4px;
+}
+
+#type .box-item:hover .shape-demo {
+    animation: rotate 2s linear 0.8s infinite;
+}
+
+#type .shape-demo.animate {
+    /*transform: rotateX(75deg) rotateZ(405deg);*/
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(75deg) rotateZ(405deg);
+    }
 }
 
 #content {
     transition: all 0.3s linear;
     position: absolute;
     opacity: 0;
-    top: -50px;
+    top: -80px;
     visibility: hidden;
     width: 100%;
     background: white;
