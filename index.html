@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="css/generator.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <style id="boxstyle"></style>
+    <style></style>
 </head>
 <body>
 <header>
@@ -268,14 +269,11 @@
                        class="control-content"/>
             </div>
         </form>
-        <h3>Preview</h3>
-
-        <div id="boxdemo" class="animated"></div>
         <div class="col-12">
-            <label class="control-label">RotateX(<span>10</span>deg)</label>
+            <label class="control-label">RotateX(<span>75</span>deg)</label>
 
             <label class="control-content">
-                <input type="range" min="0" max="360" step="1" value="10" data-rangeslider id="rangex"/>
+                <input type="range" min="0" max="360" step="1" value="75" data-rangeslider id="rangex"/>
             </label>
         </div>
         <div class="col-12">
@@ -286,23 +284,26 @@
             </label>
         </div>
         <div class="col-12">
-            <label class="control-label">RotateZ(<span>30</span>deg)</label>
+            <label class="control-label">RotateZ(<span>45</span>deg)</label>
 
             <label class="control-content">
-                <input type="range" min="0" max="360" step="1" value="30" data-rangeslider id="rangez"/>
+                <input type="range" min="0" max="360" step="1" value="45" data-rangeslider id="rangez"/>
             </label>
         </div>
-        <h3>html</h3>
-        <pre id="codehtml" contenteditable="true">（Empty）</pre>
-        <h3>css</h3>
-        <pre id="codecss" contenteditable="true">（Empty）</pre>
+        <div class="paper-title">Preview
+            <button class="right" id="getcode">Get Code</button>
+        </div>
+        <div id="code"></div>
+        <div id="boxdemo" class="open"></div>
     </div>
 </section>
 <script type="text/javascript" src="http://imwr.github.io/resources/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="http://imwr.github.io/resources/rangeslider/rangeslider.min.js"></script>
-<script type="text/javascript" src="http://imwr.github.io/resources/jsonFormatter/jsonFormatter.js"></script>
 <script type="text/javascript" src="js/Shape.js"></script>
 <script type="text/javascript" src="js/generator.js"></script>
+<link type="text/css" rel="stylesheet" href="http://imwr.github.io/resources/syntax/shCoreDefault.css"/>
+<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shCore.js"></script>
+<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shBrushJScriptAndXml.js"></script>
 <script>
     var jiathis_config = {
         summary: "",

@@ -1,7 +1,4 @@
 form {
-    line-height: 40px;
-    border-bottom: 1px solid #efefef;
-    padding-bottom: 20px;
     display: none;
 }
 
@@ -22,14 +19,14 @@ button {
     display: inline-block;
     color: #FFF !important;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .25) !important;
-    border-radius: 0;
     box-shadow: none !important;
-    -webkit-transition: all ease .5s;
     transition: all ease .5s;
     border: none;
     cursor: pointer;
-    padding: 8px 20px;
-    background-color: red;
+    padding: 0 10px;
+    background-color: #317ccf;
+    font-size: 14px;
+    float: right;
 }
 
 button.normal {
@@ -38,7 +35,7 @@ button.normal {
 }
 
 button:hover {
-    background-color: #ee9277 !important;
+    background-color: #717070 !important;
 }
 
 pre {
@@ -60,19 +57,13 @@ pre {
 
 .control-label {
     width: 25%;
-    line-height: 36px;
+    display: inline-block;
 }
 
 .control-content {
     width: 75%;
     display: block;
     float: right;
-}
-
-.animated {
-    transform-style: preserve-3d;
-    margin: 20px 0;
-    padding: 20px;
 }
 
 #typemenu {
@@ -140,7 +131,7 @@ pre {
 }
 
 #typemenu.generante .menu {
-    left: -960px;
+    left: -100px;
     opacity: 0;
 }
 
@@ -232,4 +223,24 @@ pre {
     top: 83px;
     visibility: visible;
     transition-delay: 0.4s;
+    line-height: 42px;
+}
+
+#boxdemo {
+    position: relative;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+#code {
+    transition: all 0.3s linear;
+    position: relative;
+    height: 0;
+    opacity: 0;
+}
+
+#code.open, #boxdemo.open {
+    opacity: 1;
+    height: auto;
 }

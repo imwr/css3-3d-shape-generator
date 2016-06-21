@@ -1,16 +1,4 @@
 $(document).ready(function () {
-    $('[data-rangeslider]').rangeslider({
-        polyfill: false,
-        onInit: function () {
-        },
-        onSlide: function (position, value) {
-            this.$element.parent().prev().find("span").text(value);
-            $("#boxdemo").css("transform", ("rotateX(" + $("#rangex").val() + "deg) rotateY("
-            + $("#rangey").val() + "deg) rotateZ(" + $("#rangez").val() + "deg)"))
-        },
-        onSlideEnd: function () {
-        }
-    });
     $.fn.serializeObject = function () {
         var o = {}, a = this.serializeArray();
         $.each(a, function () {
@@ -37,8 +25,8 @@ $(document).ready(function () {
                 form = $("#commonform").show();
             }
             typediv.addClass("out").find(".shape-demo").removeClass("animate");
-            content.addClass("in");
             typemenu.addClass("generante").find(".generante").text("Generate 【" + type + "】");
+            content.addClass("in");
             dopackage();
         }),
         typemenu = $("#typemenu").click(function () {
@@ -80,40 +68,72 @@ $(document).ready(function () {
             clearTimeout(timeout);
         }, 500);
     });
-    var codehtml = $("#codehtml"),
-        boxdemo = $("#boxdemo"),
-        codecss = $("#codecss"),
-        boxstyle = $("#boxstyle");
+    $("#getcode").click(function () {
+        var code = $("#code");
+        if (!code.hasClass("open")) {
+            this.textContent = "Back Preview";
+            var css = "", p = "\n";
+            for (var k in style) {
+                css += k + " {" + p;
+                var prop = style[k];
+                for (var j in prop) {
+                    css += "    " + j + ": " + prop[j] + ";" + p;
+                }
+                css += " }" + p
+            }
+            code.empty().append('<h3>html</h3>')
+                .append('<pre class="brush: html;class-name: paper-code;" contenteditable="true"></pre>')
+                .append('<h3>css</h3>')
+                .append('<pre contenteditable="true" class="brush: css;toolbar: true;class-name: paper-code;"></pre>');
+            code.find("pre").eq(0).text(html).end().eq(1).text(css);
+            SyntaxHighlighter.highlight();
+        } else {
+            this.textContent = "Get Code";
+        }
+        boxdemo.toggleClass("open");
+        code.toggleClass("open");
+    });
+    $('[data-rangeslider]').rangeslider({
+        polyfill: false,
+        onInit: function () {
+        },
+        onSlide: function (position, value) {
+            this.$element.parent().prev().find("span").text(value);
+            var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
+            "deg) rotateZ(" + $("#rangez").val() + "deg)");
+            style["." + cls]["transform"] = transform;
+            boxstyle.next("style").html("." + cls + "{transform:" + transform + "}");
+        },
+        onSlideEnd: function () {
+        }
+    });
+    var boxdemo = $("#boxdemo"),
+        boxstyle = $("#boxstyle"),
+        html, style, cls;
 
     function dopackage() {
-        var params = form.serializeObject(), cls = params.c || ("shape-" + type);
+        var params = form.serializeObject();
+        cls = params.c || ("shape-" + type);
         var pack = Shape[type || "cube"](params, cls);
         if (!pack) {
-            codehtml.empty();
-            boxdemo.empty();
-            codecss.empty();
-            boxstyle.empty();
+            $("#code").empty();
             return;
         }
-        var style = pack.style,
-            html = pack.html,
-            css = "", p = "<br/>";
+        html = pack.html;
+        style = pack.style;
+        var css = "";
         for (var k in style) {
-            css += k + " {" + p;
+            css += k + " {";
             var prop = style[k];
             for (var j in prop) {
-                css += "&nbsp;&nbsp;&nbsp;&nbsp;" + j + ": " + prop[j] + ";" + p;
+                css += j + ": " + prop[j] + ";";
             }
-            css += " }" + p
+            css += " }"
         }
-        codehtml.text(html);
-        boxdemo.css({
-            "height": (params.h || params.v || 200) + 40,
-            "width": (params.w || 200) + 40,
-            "transform": ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
-            "deg) rotateZ(" + $("#rangez").val() + "deg)")
-        }).html(html.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
-        codecss.html(css);
-        boxstyle.empty().html(css.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
+        boxdemo.css("padding", params.v ? 2 * params.v : 200).html(html);//.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
+        var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
+        "deg) rotateZ(" + $("#rangez").val() + "deg)");
+        boxstyle.html(css);
+        boxstyle.next("style").html("." + cls + "{transform:" + transform + "}");
     }
 });
