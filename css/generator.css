@@ -67,6 +67,10 @@ pre {
     float: right;
 }
 
+.main-inner {
+    padding: 0;
+}
+
 #typemenu {
     text-align: center;
     background: white;
