@@ -3,10 +3,11 @@ form {
 }
 
 select, input:not([type=radio]) {
-    padding: 8px 6px;
+    padding: 8px;
     border-radius: 2px;
     box-shadow: none !important;
     color: #858585;
+    font-size: 12px;
     background-color: #fff;
     border: 1px solid #d5d5d5;
 }
@@ -56,12 +57,12 @@ pre {
 }
 
 .control-label {
-    width: 25%;
+    width: 36%;
     display: inline-block;
 }
 
 .control-content {
-    width: 75%;
+    width: 64%;
     display: block;
     float: right;
 }
@@ -69,12 +70,13 @@ pre {
 #typemenu {
     text-align: center;
     background: white;
-    padding: 15px;
+    line-height: 60px;
     cursor: pointer;
     font-size: 28px;
     text-shadow: 1px 1px #efefef, 2px 2px #aee2d9;
     color: #222;
     position: relative;
+    height: 60px;
 }
 
 #typemenu .menu {
@@ -99,8 +101,8 @@ pre {
     content: "";
     width: 25px;
     height: 4px;
-    left: 0;
-    top: 10px;
+    left: 16px;
+    top: 21px;
     box-shadow: 0 8px #222, 0 16px #222;
 }
 
@@ -109,8 +111,8 @@ pre {
     content: "";
     width: 0;
     height: 0;
-    left: 0px;
-    top: 12px;
+    left: 16px;
+    top: 21px;
     border-right: 12px solid #222;
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
@@ -122,8 +124,8 @@ pre {
     content: "";
     width: 15px;
     height: 8px;
-    left: 12px;
-    top: 17px;
+    left: 27px;
+    top: 26px;
 }
 
 #typemenu.generante .generante {
@@ -139,7 +141,7 @@ pre {
     opacity: 1;
     transition: all 0.3s linear;
     position: absolute;
-    top: 83px;
+    top: 70px;
     left: 0;
     background: white;
     visibility: visible;
@@ -158,7 +160,7 @@ pre {
     width: calc(50% - 15px);
     padding: 15px;
     font-size: 14px;
-    background: #f1f1f1;
+    background: #f9f9f9;
     border: 1px solid #d1d1d1;
     height: 130px;
     cursor: pointer;
@@ -186,7 +188,7 @@ pre {
 }
 
 #type .box-item:hover {
-    background: #ddd;
+    background: #eee;
     border-radius: 4px;
 }
 
@@ -214,41 +216,38 @@ pre {
     width: 100%;
     background: white;
     padding: 20px;
+    margin-bottom: 10px;
     z-index: -1;
-    border: 1px solid #e0dbdb;
 }
 
 #content.in {
     opacity: 1;
-    top: 83px;
+    top: 70px;
     transition-delay: 0.4s;
-    line-height: 42px;
+    line-height: 36px;
     visibility: visible;
 }
 
 #boxdemo {
     position: relative;
-    height: 0;
-    opacity: 0;
-    transition: all 0.3s linear;
+    border: 1px solid #d1d1d1;
 }
 
 #code {
-    transition: all 0.3s linear;
-    height: 0;
+    left: 0;
     opacity: 0;
     position: absolute;
-    top: 83px;
-    background: white;
-    padding: 20px;
-    border: 1px solid #e0dbdb;
-    margin-bottom: 20px;
+    top: 300px;
+    width: 100%;
     visibility: hidden;
-    line-height: 42px;
+    transition: all 0.5s ease-in-out;
+    background: white;
+    margin-bottom: 10px;
+    /* border: 1px solid #e0dbdb; */
 }
 
-#code.open, #boxdemo.open {
+#code.open {
+    top: 0;
     opacity: 1;
-    height: auto;
     visibility: visible;
 }

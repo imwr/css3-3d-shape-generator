@@ -25,7 +25,7 @@ $(document).ready(function () {
                 form = $("#commonform").show();
             }
             typediv.addClass("out").find(".shape-demo").removeClass("animate");
-            typemenu.addClass("generante").find(".generante").text("Generate 【" + type + "】");
+            typemenu.addClass("generante").find(".generante").text("【" + type + "】");
             content.addClass("in");
             dopackage();
         }),
@@ -69,7 +69,7 @@ $(document).ready(function () {
             clearTimeout(timeout);
         }, 500);
     });
-    $(".getcode").click(function () {
+    $(".generate-code").click(function () {
         var code = $("#code");
         if (!code.hasClass("open")) {
             var css = "", p = "\n";
@@ -79,17 +79,15 @@ $(document).ready(function () {
                 for (var j in prop) {
                     css += "    " + j + ": " + prop[j] + ";" + p;
                 }
-                css += " }" + p
+                css += "}" + p
             }
-            code.find(".paper-content").empty().append('<div class="paper-title">html</div>')
-                .append('<pre class="brush: html;class-name: paper-code;" contenteditable="true"></pre>')
-                .append('<div class="paper-title">css</div>')
-                .append('<pre contenteditable="true" class="brush: css;toolbar: true;class-name: paper-code;"></pre>')
+            code.find(".paper-content").empty()
+                .append('<pre class="brush: html;class-name: paper-code;title: html"></pre>')
+                .append('<pre class="brush: css;toolbar: true;class-name: paper-code;title: css"></pre>')
                 .find("pre").eq(0).text(html).end().eq(1).text(css);
             SyntaxHighlighter.highlight();
         }
-        boxdemo.toggleClass("open");
-        code.toggleClass("open");
+        code.toggleClass("open")
     });
     $('[data-rangeslider]').rangeslider({
         polyfill: false,
