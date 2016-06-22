@@ -86,8 +86,12 @@ $(document).ready(function () {
                 .append('<pre class="brush: css;toolbar: true;class-name: paper-code;title: css"></pre>')
                 .find("pre").eq(0).text(html).end().eq(1).text(css);
             SyntaxHighlighter.highlight();
+            var body = $('body');
+            body.scrollTop() > 200 && body.animate({
+                scrollTop: 200
+            }, 300);
         }
-        code.toggleClass("open")
+        code.toggleClass("open");
     });
     $('[data-rangeslider]').rangeslider({
         polyfill: false,
@@ -130,6 +134,6 @@ $(document).ready(function () {
         var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
         "deg) rotateZ(" + $("#rangez").val() + "deg)");
         boxstyle.html(css);
-        boxstyle.next("style").html("." + cls + "{transform:" + transform + "}");
+        boxstyle.next("style").html("." + cls + "{transform:" + transform + ";margin: 0 auto}");
     }
 });

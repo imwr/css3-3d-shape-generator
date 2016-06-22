@@ -22,8 +22,7 @@ var Shape = {
         style[c] = {
             width: w + "px",
             height: h + "px",
-            "transform-style": "preserve-3d",
-            position: "absolute"
+            "transform-style": "preserve-3d"
         };
         style[c + " .tcface"] = {
             width: "100%",
