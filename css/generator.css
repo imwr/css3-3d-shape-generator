@@ -10,6 +10,8 @@ select, input:not([type=radio]) {
     font-size: 12px;
     background-color: #fff;
     border: 1px solid #d5d5d5;
+    -webkit-appearance: none;
+    outline: none;
 }
 
 input[disabled=disabled] {
@@ -76,7 +78,7 @@ pre {
     background: white;
     line-height: 60px;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 24px;
     text-shadow: 1px 1px #efefef, 2px 2px #aee2d9;
     color: #222;
     position: relative;
@@ -173,11 +175,11 @@ pre {
     text-align: center;
     transition: all 0.3s linear;
     position: relative;
+    transform: perspective(1000);
 }
 
 #type .box-item .shape-demo {
     margin: 0 auto;
-    max-height: 50px;
     transform: rotateX(75deg) rotateZ(45deg);
     transition: all 2s linear;
 }
@@ -228,13 +230,14 @@ pre {
     opacity: 1;
     top: 70px;
     transition-delay: 0.4s;
-    line-height: 36px;
+    line-height: 40px;
     visibility: visible;
 }
 
 #boxdemo {
     position: relative;
     border: 1px solid #d1d1d1;
+    perspective: 2000;
 }
 
 #code {

@@ -91,7 +91,7 @@ $(document).ready(function () {
                 scrollTop: 200
             }, 300);
         }
-        code.toggleClass("open");
+        code.toggleClass("open").prev().toggle();
     });
     $('[data-rangeslider]').rangeslider({
         polyfill: false,
@@ -123,14 +123,14 @@ $(document).ready(function () {
         style = pack.style;
         var css = "";
         for (var k in style) {
-            css += k + " {";
+            css += k + "{";
             var prop = style[k];
             for (var j in prop) {
                 css += j + ": " + prop[j] + ";";
             }
-            css += " }"
+            css += "}"
         }
-        boxdemo.css("padding", params.v ? 2 * params.v : 200).html(html);//.replace(/&nbsp;/g, "").replace(/<br\/>/g, ""));
+        boxdemo.css("padding", (params.v ? 2 * params.v : 200) + "px 0").html(html);
         var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
         "deg) rotateZ(" + $("#rangez").val() + "deg)");
         boxstyle.html(css);
