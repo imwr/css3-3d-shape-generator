@@ -102,7 +102,7 @@ $(document).ready(function () {
             var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
             "deg) rotateZ(" + $("#rangez").val() + "deg)");
             style["." + cls]["transform"] = transform;
-            boxstyle.next("style").html("." + cls + "{transform:" + transform + "}");
+            boxstyle.next("style").html("." + cls + "{transform:" + transform + ";margin: 0 auto}");
         },
         onSlideEnd: function () {
         }
