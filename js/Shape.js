@@ -70,6 +70,41 @@ var Shape = {
     prism: function () {},
     sphere: function () {},
     fan: function () {},
-    polyhedral: function () {},
+    polyhedron: function (params, cls) { // 多面框
+        var c = "." + cls,
+            w = params.w || 100,
+            v = params.v || 100,
+            side = params.s || 5;
+        var style = {};
+        style[c] = {
+            width: w + "px",
+            height: v + "px",
+            "transform-style": "preserve-3d",
+            position: "relative"
+        };
+        style[c + " .tcface"] = {
+            "transform-origin": "0 0",
+            "width": (w * Math.tan(Math.PI / side)) + "px",
+            "height": v + "px",
+            position: "absolute"
+        };
+        for (var i = 0; side > i; i++) {
+            style[c + " .f" + i] = {
+                "background-color": randomColor(),
+                "transform": "rotateY(" + (i * 360 / side + 180 / side) + "deg) " +
+                " translate3D(-50%,0," + w / 2 + "px)"
+            };
+        }
+        var html = '<div class="' + cls + '">\n';
+        for (var i = 0; i < side; i++) {
+            var lic = "f" + i;
+            html += '    <div class="tcface ' + lic + '">' + lic + '</div>\n';
+        }
+        html += '</div>';
+        return {
+            style: style,
+            html: html
+        };
+    },
     ladder: function () {}
 };

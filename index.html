@@ -50,6 +50,16 @@
             </div>
             <div class="shape-text">立方体 Cube</div>
         </div>
+        <div class="box-item" data-type="polyhedron">
+            <div class="shape-demo shape-polyhedron-demo">
+                <div class="tcface f0"></div>
+                <div class="tcface f1"></div>
+                <div class="tcface f2"></div>
+                <div class="tcface f3"></div>
+                <div class="tcface f4"></div>
+            </div>
+            <div class="shape-text">多面框 Polyhedron</div>
+        </div>
         <div class="box-item">
             <div class="shape-pyramid-demo" data-type1="pyramid">
                 <p>Developing</p>
@@ -57,15 +67,6 @@
                 <p>Waiting...</p>
             </div>
             <div class="shape-text">金字塔 Pyramid</div>
-        </div>
-        <div class="box-item" data-type1="polyhedron">
-            <div class="shape-pyramid-demo" data-type1="polyhedron">
-                <p>Developing</p>
-
-                <p>Waiting...</p>
-            </div>
-
-            <div class="shape-text">多Face 框 Polyhedron</div>
         </div>
         <div class="box-item" data-type1="fan">
             <div class="shape-pyramid-demo" data-type1="fan">
@@ -176,11 +177,11 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Length:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Height:</label>
-                <input type="text" maxlength="6" name="v" placeholder="default 200..."
+                <input type="text" maxlength="6" name="v" placeholder="default 100..."
                        class="control-content"/>
             </div>
             <div class="col-12">
@@ -308,15 +309,15 @@
 <script type="text/javascript" src="http://imwr.github.io/resources/syntax/shCore.js"></script>
 <script type="text/javascript" src="http://imwr.github.io/resources/syntax/shBrushJScriptAndXml.js"></script>
 <script>
-    var jiathis_config = {
-        summary: "",
-        shortUrl: false,
-        hideMore: false
-    }, disqus_config = function () {
-        this.page.url = location.href; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    setTimeout(function () {
+    $(function () {
+        var jiathis_config = {
+            summary: "",
+            shortUrl: false,
+            hideMore: false
+        }, disqus_config = function () {
+            this.page.url = location.href; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
         var d = document, share = d.createElement('script'), dis = d.createElement('script');
         // add jiathis
         share.src = '//v3.jiathis.com/code/jia.js';
@@ -325,7 +326,7 @@
         dis.setAttribute('data-timestamp', new Date());
         (d.head || d.body).appendChild(share).appendChild(dis);
         $("#share-comment").show();
-    }, 1000);
+    });
 </script>
 </body>
 </html>

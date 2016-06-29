@@ -5,18 +5,22 @@
     transform-style: preserve-3d;
     position: relative;
 }
+
 .shape-cube-demo .tcface {
     width: 100%;
     height: 100%;
     position: absolute;
 }
+
 .shape-cube-demo .top {
     background: #37543d;
     transform: rotateX(0deg) translateZ(50px);
 }
+
 .shape-cube-demo .bottom {
     background: #0985f1;
 }
+
 .shape-cube-demo .right {
     background: #f73ed3;
     transform: rotateY(90deg) rotatez(-90deg) translateZ(50px) translateX(0px);
@@ -24,6 +28,7 @@
     width: 50px;
     height: 50px;
 }
+
 .shape-cube-demo .left {
     background: #20d11f;
     transform: rotateY(-90deg) rotateZ(90deg) translateY(-50px);
@@ -31,13 +36,57 @@
     width: 50px;
     height: 50px;
 }
+
 .shape-cube-demo .back {
     background: #bcc8ff;
     transform: rotateX(90deg) rotatez(180deg) translateY(-25px) translateZ(25px);
     height: 50px;
 }
+
 .shape-cube-demo .front {
     background: #698825;
     transform: rotateX(-90deg) translateY(-25px) translateZ(25px);
     height: 50px;
+}
+
+.shape-polyhedron-demo {
+    transform: rotateX(135deg);
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+
+.shape-polyhedron-demo .tcface {
+    transform-origin: 0 0;
+    width: 36.32712640026804px;
+    height: 50px;
+    position: absolute;
+}
+
+.shape-polyhedron-demo .f0 {
+    background-color: #e175b0;
+    transform: rotateY(36deg) translate3D(-50%, 0, 25px);
+}
+
+.shape-polyhedron-demo .f1 {
+    background-color: #44b044;
+    transform: rotateY(108deg) translate3D(-50%, 0, 25px);
+}
+
+.shape-polyhedron-demo .f2 {
+    background-color: #88cc56;
+    transform: rotateY(180deg) translate3D(-50%, 0, 25px);
+}
+
+.shape-polyhedron-demo .f3 {
+    background-color: #0373d5;
+    transform: rotateY(252deg) translate3D(-50%, 0, 25px);
+}
+
+.shape-polyhedron-demo .f4 {
+    background-color: #d2ea61;
+    transform: rotateY(324deg) translate3D(-50%, 0, 25px);
 }

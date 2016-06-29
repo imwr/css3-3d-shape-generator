@@ -12,7 +12,7 @@ Create 3D CSS shapes below pretty easily：
 + prism 棱柱
 + sphere 球体
 + fan 扇叶
-+ polyhedron 多面框
++ polyhedron 多面框 ![image](images/polyhedron.png)
 + ladder 梯
 + ......
 

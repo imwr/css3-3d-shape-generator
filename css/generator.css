@@ -175,13 +175,13 @@ pre {
     text-align: center;
     transition: all 0.3s linear;
     position: relative;
-    transform: perspective(1000);
+    transform: perspective(1000px);
 }
 
 #type .box-item .shape-demo {
     margin: 0 auto;
-    transform: rotateX(75deg) rotateZ(45deg);
     transition: all 2s linear;
+    transform: rotateX(75deg) rotateZ(45deg);
 }
 
 #type .box-item .shape-text {
