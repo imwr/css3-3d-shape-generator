@@ -209,7 +209,7 @@ pre {
     text-align: center;
     transition: all 0.3s linear;
     position: relative;
-    transform: perspective(1000px);
+    perspective: 1000px;
 }
 
 #type .box-item .shape-demo {
@@ -269,7 +269,7 @@ pre {
 #boxdemo {
     position: relative;
     border: 1px solid #d1d1d1;
-    perspective: 2000;
+    perspective: 2000px;
 }
 
 #code {

@@ -137,7 +137,7 @@ $(document).ready(function () {
             }
             css += "}"
         }
-        boxdemo.css("padding", (params.v ? 2 * params.v : 200) + "px 0").html(html);
+        boxdemo.show().css("padding", (params.v ?  params.v : 100) + "px 0").html(html);
         var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
         "deg) rotateZ(" + $("#rangez").val() + "deg)");
         boxstyle.html(css);
