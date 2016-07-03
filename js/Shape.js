@@ -17,6 +17,9 @@ var Shape = {
             w = params.w || 100,
             h = params.h || 100,
             v = params.v || 100;
+		if( w > 500 || h > 500 || v > 500) {
+			return alert("size max = 500");
+		}
         var html = '<div class="' + cls + '">\n' +
             '    <div class="tcface top"></div>\n' +
             '    <div class="tcface left"></div>\n' +
@@ -82,6 +85,12 @@ var Shape = {
             w = params.w || 100,
             v = params.v || 100,
             side = params.s || 5;
+		if( w > 500 || h > 500 || v > 500) {
+			return alert("size max = 500");
+		}
+		if( params.s > 360 ) {
+			return alert("face max = 360");
+		}
         var style = {};
         style[c] = {
             width: w + "px",
