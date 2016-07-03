@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>Css3 3d Shape Generator —— generate css3 shape (cube, pyramid, cylinder, prism, sphere, fan, polyhedral iframe, ladder</title>
+    <title>Css3 3d Shape Generator —— generate css3 shape (cube, pyramid, cylinder, prism, sphere, fan, polyhedral
+        iframe, ladder</title>
     <meta charset="utf-8"/>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
@@ -16,7 +17,6 @@
     <link rel="bookmark" href="http://imwr.github.io/resources/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/github-example.css">
 
     <link rel="stylesheet" type="text/css" href="css/generator.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
@@ -24,21 +24,12 @@
     <style></style>
 </head>
 <body>
-<header>
-    <div class="main-inner">
-        <a href="https://github.com/imwr/css3-3d-shape-generator" target="_blank" class="button">
-            <small>View project on</small>
-            GitHub</a>
-
-        <h1>Imwr</h1>
-    </div>
-</header>
-<section class="main-inner">
-    <div id="typemenu">
+<section class="container">
+    <div id="typemenu" class="container">
         <div class="generante"></div>
         <div class="menu">Css3 Shape Generator</div>
     </div>
-    <div class="col-12" id="type">
+    <div class="container" id="type">
         <div class="box-item" data-type="cube">
             <div class="shape-demo shape-cube-demo">
                 <div class="tcface top"></div>
@@ -110,26 +101,10 @@
                 <p>Waiting...</p></div>
             <div class="shape-text">棱柱 Prism</div>
         </div>
-
+        <p><a href="http://tt-cc.cn">tt-cc</a></p>
         <div class="clearfix"></div>
-        <section class="padding-l hide" id="share-comment">
-            <br/>
-            <!-- JiaThis Button BEGIN -->
-            <div class="jiathis_style">
-                <span class="jiathis_txt">分享到：</span>
-                <a class="jiathis_button_weixin">微信</a>
-                <a class="jiathis_button_tsina">新浪微博</a>
-                <a class="jiathis_button_qzone">QQ空间</a>
-                <a class="jiathis_button_cqq">QQ好友</a>
-            </div>
-            <!-- JiaThis Button END -->
-            <br/>
-            <br/>
-
-            <div id="disqus_thread"></div>
-        </section>
     </div>
-    <div id="content">
+    <div class="container" id="content">
         <form id="commonform">
             <div class="col-12">
                 <label class="control-label">ClassName:</label>
@@ -190,9 +165,9 @@
                        class="control-content"/>
             </div>
             <!--<div class="col-12">-->
-                <!--<label class="control-label">Angle:</label>-->
-                <!--<input type="text" maxlength="6" name="a" placeholder="default 0deg..."-->
-                       <!--class="control-content"/>-->
+            <!--<label class="control-label">Angle:</label>-->
+            <!--<input type="text" maxlength="6" name="a" placeholder="default 0deg..."-->
+            <!--class="control-content"/>-->
             <!--</div>-->
         </form>
         <form id="fan">
@@ -308,25 +283,5 @@
 <link type="text/css" rel="stylesheet" href="http://imwr.github.io/resources/syntax/shCoreDefault.css"/>
 <script type="text/javascript" src="http://imwr.github.io/resources/syntax/shCore.js"></script>
 <script type="text/javascript" src="http://imwr.github.io/resources/syntax/shBrushJScriptAndXml.js"></script>
-<script>
-    $(function () {
-        var jiathis_config = {
-            summary: "",
-            shortUrl: false,
-            hideMore: false
-        }, disqus_config = function () {
-            this.page.url = location.href; // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        var d = document, share = d.createElement('script'), dis = d.createElement('script');
-        // add jiathis
-        share.src = '//v3.jiathis.com/code/jia.js';
-        // add disqus
-        dis.src = '//tt-cc.disqus.com/embed.js';
-        dis.setAttribute('data-timestamp', new Date());
-        (d.head || d.body).appendChild(share).appendChild(dis);
-        $("#share-comment").show();
-    });
-</script>
 </body>
 </html>

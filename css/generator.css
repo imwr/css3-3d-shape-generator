@@ -1,5 +1,38 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    /*padding-left: 15px;*/
+    /*padding-right: 15px*/
+}
+
+@media (min-width: 768px) {
+    .container {
+        width:750px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width:970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width:1170px
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .main-inner {
+        width: 100%;
+    }
+}
+
 form {
     display: none;
+    border-width: 0 1px 1px 1px;
+    padding: 10px;
 }
 
 select, input:not([type=radio]) {
@@ -75,7 +108,9 @@ pre {
 
 #typemenu {
     text-align: center;
-    background: white;
+    background: #f9f9f9;
+    border: solid #d1d1d1;
+    border-width: 0 1px 1px 1px;
     line-height: 60px;
     cursor: pointer;
     font-size: 24px;
@@ -148,7 +183,6 @@ pre {
     transition: all 0.3s linear;
     position: absolute;
     top: 70px;
-    left: 0;
     background: white;
     visibility: visible;
     z-index: -1;
@@ -219,9 +253,7 @@ pre {
     opacity: 0;
     top: -80px;
     visibility: hidden;
-    width: 100%;
     background: white;
-    padding: 20px;
     margin-bottom: 10px;
     z-index: -1;
 }

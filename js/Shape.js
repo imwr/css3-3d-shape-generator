@@ -1,3 +1,10 @@
+/* =========================================================== *
+ * @site http://tt-cc.cn
+ * @email ttccmvp@gmail.com
+ * Copyright 2016 ttcc
+ * Licensed under the Apache License, Version 2.0 (the "License")
+ * =========================================================== */
+;
 var randomColor = function () {
     return '#' + (function (color) {
             return (color += '0123456789abcdef'[Math.floor(Math.random() * 16)])
