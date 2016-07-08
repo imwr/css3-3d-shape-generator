@@ -114,7 +114,7 @@ var Shape = {
         var html = '<div class="' + cls + '">\n';
         for (var i = 0; i < side; i++) {
             var lic = "f" + i;
-            html += '    <div class="tcface ' + lic + '">' + lic + '</div>\n';
+            html += '    <div class="tcface ' + lic + '"></div>\n';
         }
         html += '</div>';
         return {
