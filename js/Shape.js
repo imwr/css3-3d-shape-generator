@@ -85,7 +85,7 @@ var Shape = {
             w = params.w || 100,
             v = params.v || 100,
             side = params.s || 5;
-		if( w > 500 || h > 500 || v > 500) {
+		if( w > 500 || v > 500) {
 			return alert("size max = 500");
 		}
 		if( params.s > 360 ) {
