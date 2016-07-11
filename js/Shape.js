@@ -21,12 +21,12 @@ var Shape = {
 			return alert("size max = 500");
 		}
         var html = '<div class="' + cls + '">\n' +
-            '    <div class="tcface top"></div>\n' +
-            '    <div class="tcface left"></div>\n' +
-            '    <div class="tcface front"></div>\n' +
-            '    <div class="tcface bottom"></div>\n' +
-            '    <div class="tcface right"></div>\n' +
-            '    <div class="tcface back"></div>\n' +
+            '<div class="tcface top"></div>\n' +
+            '<div class="tcface left"></div>\n' +
+            '<div class="tcface front"></div>\n' +
+            '<div class="tcface bottom"></div>\n' +
+            '<div class="tcface right"></div>\n' +
+            '<div class="tcface back"></div>\n' +
             '</div>';
         var style = {};
         style[c] = {
@@ -114,7 +114,7 @@ var Shape = {
         var html = '<div class="' + cls + '">\n';
         for (var i = 0; i < side; i++) {
             var lic = "f" + i;
-            html += '    <div class="tcface ' + lic + '"></div>\n';
+            html += '<div class="tcface ' + lic + '"></div>\n';
         }
         html += '</div>';
         return {
