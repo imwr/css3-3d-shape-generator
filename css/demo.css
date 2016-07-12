@@ -1,9 +1,43 @@
+.shape-demo {
+    margin: 0 auto;
+    transition: all 2s linear;
+}
+
+.shape-demo:hover {
+    animation: rotate 2s linear 0.8s infinite;
+}
+
+.shape-demo.animate {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(75deg) rotateZ(405deg);
+    }
+}
+
+.shape-demo1:hover {
+    animation: rotate1 2s linear 0.8s infinite;
+}
+
+.shape-demo1.animate {
+    animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+    100% {
+        transform: rotateY(450deg);
+    }
+}
+
 .shape-cube-demo {
     width: 50px;
     height: 50px;
     top: 36px;
     transform-style: preserve-3d;
     position: relative;
+    transform: rotateX(75deg) rotateZ(45deg);
 }
 
 .shape-cube-demo .tcface {
@@ -50,7 +84,7 @@
 }
 
 .shape-polyhedron-demo {
-    transform: rotateX(135deg);
+    transform: rotateX(75deg) rotateZ(45deg);
     width: 50px;
     height: 50px;
     transform-style: preserve-3d;
@@ -89,4 +123,82 @@
 .shape-polyhedron-demo .f4 {
     background-color: #d2ea61;
     transform: rotateY(324deg) translate3D(-50%, 0, 25px);
+}
+
+.shape-pyramid-demo {
+    width: 60px;
+    height: 60px;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(90deg);
+}
+
+.shape-pyramid-demo .tcface {
+    transform-origin: 0 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+}
+
+.shape-pyramid-demo .s0 {
+    border-bottom: 60px solid #ef35ab;
+    transform: rotateY(45deg) rotateX(30deg) translate3D(-50%, 0, 0);
+}
+
+.shape-pyramid-demo .s1 {
+    border-bottom: 60px solid #5ef53e;
+    transform: rotateY(135deg) rotateX(30deg) translate3D(-50%, 0, 0);
+}
+
+.shape-pyramid-demo .s2 {
+    border-bottom: 60px solid #8c8368;
+    transform: rotateY(225deg) rotateX(30deg) translate3D(-50%, 0, 0);
+}
+
+.shape-pyramid-demo .s3 {
+    border-bottom: 60px solid #76333f;
+    transform: rotateY(315deg) rotateX(30deg) translate3D(-50%, 0, 0);
+}
+
+.shape-5star-demo {
+    width: 155px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shape-5star-demo .tcface {
+    transform-origin: 0 0;
+    width: 0;
+    height: 0;
+    border-left: 77.5px solid transparent;
+    border-right: 77.5px solid transparent;
+    position: absolute;
+}
+
+.shape-5star-demo .s0 {
+    border-bottom: 50px solid #604e19;
+    transform: rotateY(36deg) rotateX(29.999999999999996deg) translate3D(-50%, 0, 0);
+}
+
+.shape-5star-demo .s1 {
+    border-bottom: 50px solid #ad718e;
+    transform: rotateY(108deg) rotateX(29.999999999999996deg) translate3D(-50%, 0, 0);
+}
+
+.shape-5star-demo .s2 {
+    border-bottom: 50px solid #a5cbb7;
+    transform: rotateY(180deg) rotateX(29.999999999999996deg) translate3D(-50%, 0, 0);
+}
+
+.shape-5star-demo .s3 {
+    border-bottom: 50px solid #a6ed0c;
+    transform: rotateY(252deg) rotateX(29.999999999999996deg) translate3D(-50%, 0, 0);
+}
+
+.shape-5star-demo .s4 {
+    border-bottom: 50px solid #ffbe26;
+    transform: rotateY(324deg) rotateX(29.999999999999996deg) translate3D(-50%, 0, 0);
 }

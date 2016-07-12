@@ -84,7 +84,7 @@ $(document).ready(function () {
                 css += k + " {" + p;
                 var prop = style[k];
                 for (var j in prop) {
-                    css += "    " + j + ": " + prop[j] + ";" + p;
+                    css += "" + j + ": " + prop[j] + ";" + p;
                 }
                 css += "}" + p
             }
@@ -137,9 +137,9 @@ $(document).ready(function () {
             }
             css += "}"
         }
-        boxdemo.show().css("padding", (params.v ?  params.v : 100) + "px 0").html(html);
-        var transform = ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
-        "deg) rotateZ(" + $("#rangez").val() + "deg)");
+        boxdemo.show().css("padding", (params.v ? params.v : 100) + "px 0").html(html);
+        var transform = pack.transform || ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
+            "deg) rotateZ(" + $("#rangez").val() + "deg)");
         boxstyle.html(css);
         boxstyle.next("style").html("." + cls + "{transform:" + transform + ";margin: 0 auto}");
     }

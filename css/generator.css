@@ -2,25 +2,26 @@
     margin-right: auto;
     margin-top: 10px;
     margin-left: auto;
+    background: white;
     /*padding-left: 15px;*/
     /*padding-right: 15px*/
 }
 
 @media (min-width: 768px) {
     .container {
-        width:750px
+        width: 750px
     }
 }
 
 @media (min-width: 992px) {
     .container {
-        width:970px
+        width: 970px
     }
 }
 
 @media (min-width: 1200px) {
     .container {
-        width:1170px
+        width: 1170px
     }
 }
 
@@ -92,6 +93,10 @@ pre {
     width: 100%;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .control-label {
     width: 36%;
     display: inline-block;
@@ -101,10 +106,6 @@ pre {
     width: 64%;
     display: block;
     float: right;
-}
-
-.main-inner {
-    padding: 0;
 }
 
 #typemenu {
@@ -140,11 +141,11 @@ pre {
     background: #222;
     position: absolute;
     content: "";
-    width: 25px;
-    height: 4px;
-    left: 16px;
-    top: 21px;
-    box-shadow: 0 8px #222, 0 16px #222;
+    width: 20px;
+    height: 3px;
+    left: 12px;
+    top: 23px;
+    box-shadow: 0 7px #222, 0 14px #222;
 }
 
 #typemenu .generante:before {
@@ -212,12 +213,6 @@ pre {
     perspective: 1000px;
 }
 
-#type .box-item .shape-demo {
-    margin: 0 auto;
-    transition: all 2s linear;
-    transform: rotateX(75deg) rotateZ(45deg);
-}
-
 #type .box-item .shape-text {
     position: absolute;
     bottom: 12px;
@@ -232,22 +227,8 @@ pre {
     border-radius: 4px;
 }
 
-#type .box-item:hover .shape-demo {
-    animation: rotate 2s linear 0.8s infinite;
-}
-
-#type .shape-demo.animate {
-    /*transform: rotateX(75deg) rotateZ(405deg);*/
-    animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotateX(75deg) rotateZ(405deg);
-    }
-}
-
 #content {
+    width: 100%;
     transition: all 0.3s linear;
     position: absolute;
     opacity: 0;
@@ -256,6 +237,7 @@ pre {
     background: white;
     margin-bottom: 10px;
     z-index: -1;
+    padding: 0 10px;
 }
 
 #content.in {

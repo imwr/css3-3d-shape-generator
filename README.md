@@ -7,7 +7,7 @@ Generate pure css3 3d shape, include html and css code.
 Create 3D CSS shapes below pretty easily：
 
 + cube 立方体 ![image](images/cube.png)
-+ pyramid 金字塔
++ pyramid 金字塔 ![image](images/pyramid.png)
 + cylinder 圆柱体
 + prism 棱柱
 + sphere 球体

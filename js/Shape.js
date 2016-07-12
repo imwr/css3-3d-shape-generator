@@ -17,9 +17,9 @@ var Shape = {
             w = params.w || 100,
             h = params.h || 100,
             v = params.v || 100;
-		if( w > 500 || h > 500 || v > 500) {
-			return alert("size max = 500");
-		}
+        if (w > 500 || h > 500 || v > 500) {
+            return alert("size max = 500");
+        }
         var html = '<div class="' + cls + '">\n' +
             '<div class="tcface top"></div>\n' +
             '<div class="tcface left"></div>\n' +
@@ -75,22 +75,74 @@ var Shape = {
             html: html
         };
     },
-    pyramid: function () {},
+    pyramid: function (params, cls) { // 金字塔
+        params.w = params.w || 100;
+        params.v = params.v || 100;
+        params.s = params.s || 4;
+        params.auto = "on";
+        return this.fan(params, cls);
+    },
     cylinder: function () {},
     prism: function () {},
     sphere: function () {},
-    fan: function () {},
+    fan: function (params, cls) {
+        var c = "." + cls,
+            w = params.w || 100,
+            v = params.v || 100,
+            side = params.s || 4;
+        if (params.auto == "on") {
+            var perangle = (side - 2) * 180 / side / 2,
+                radius = w / 2 * Math.tan(perangle / 180 * Math.PI);
+            a = Math.asin(radius / v) * 180 / Math.PI;
+        }
+        if (!a) {
+            alert("invalid size, can't make a pyramid");
+            return
+        }
+        var style = {};
+        style[c] = {
+            width: w + "px",
+            height: v + "px",
+            "transform-style": "preserve-3d"
+        };
+        style[c + " .tcface"] = {
+            "transform-origin": "0 0",
+            "width": 0,
+            "height": 0,
+            "border-left": w / 2 + "px solid transparent",
+            "border-right": w / 2 + "px solid transparent",
+            "position": "absolute"
+        };
+        for (var i = 0; side > i; i++) {
+            style[c + " .s" + i] = {
+                "border-bottom": v + "px solid " + randomColor(),
+                "transform": "rotateY(" + (i * 360 / side + 180 / side) + "deg) " +
+                ( a ? "rotateX(" + a + "deg)" : "") + " translate3D(-50%,0,0)"
+            };
+        }
+        var html = '<div class="' + cls + '">\n';
+        for (var i = 0; i < side; i++) {
+            var lic = "s" + i;
+            html += '<div class="tcface ' + lic + '"></div>\n';
+        }
+        html += '</div>';
+        return {
+            style: style,
+            html: html,
+            transform: "rotateY(" + 360 / side + "deg)"
+        };
+    },
     polyhedron: function (params, cls) { // 多面框
         var c = "." + cls,
             w = params.w || 100,
             v = params.v || 100,
             side = params.s || 5;
-		if( w > 500 || v > 500) {
-			return alert("size max = 500");
-		}
-		if( params.s > 360 ) {
-			return alert("face max = 360");
-		}
+        if (w > 500 || v > 500) {
+            return alert("size max = 500");
+        }
+        if (params.s > 360) {
+            return alert("face max = 360");
+        }
         var style = {};
         style[c] = {
             width: w + "px",
