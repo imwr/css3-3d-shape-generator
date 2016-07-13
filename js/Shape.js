@@ -79,8 +79,10 @@ var Shape = {
         params.w = params.w || 100;
         params.v = params.v || 100;
         params.s = params.s || 4;
-        params.auto = "on";
-        return this.fan(params, cls);
+        params.auto = 1;
+        var pack = this.fan(params, cls);
+        pack.transform = "rotateY(" + 360 / params.s + "deg)";
+        return pack;
     },
     cylinder: function () {},
     prism: function (params, cls) {
@@ -152,8 +154,9 @@ var Shape = {
         var c = "." + cls,
             w = params.w || 100,
             v = params.v || 100,
-            side = params.s || 4;
-        if (params.auto == "on") {
+            side = params.s || 5,
+            a = params.a || 60;
+        if (params.auto == 1) {
             var perangle = (side - 2) * 180 / side / 2,
                 radius = w / 2 * Math.tan(perangle / 180 * Math.PI);
             a = Math.asin(radius / v) * 180 / Math.PI;
@@ -192,7 +195,7 @@ var Shape = {
         return {
             style: style,
             html: html,
-            transform: "rotateY(" + 360 / side + "deg)"
+            transform: "rotateX(90deg)"
         };
     },
     polyhedron: function (params, cls) { // 多面框

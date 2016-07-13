@@ -70,10 +70,11 @@ $(document).ready(function () {
             clearTimeout(timeout);
         }, 500);
     }).on("click", "[name=auto]", function () {
-        if (this.checked) {
-            $(this).parent().prev("input").attr("disabled", "disabled")
+        var disable = this.getAttribute('data-disable');
+        if (this.value * 1) {
+            $(this).parent().find("[name=" + disable + "]").attr("disabled", "disabled")
         } else {
-            $(this).parent().prev("input").removeAttr("disabled")
+            $(this).parent().find("[name=" + disable + "]").removeAttr("disabled")
         }
         clearTimeout(timeout);
         timeout = setTimeout(function () {
@@ -125,7 +126,8 @@ $(document).ready(function () {
 
     function dopackage() {
         var params = form.serializeObject();
-        cls = params.c || ("shape-" + type);
+        params.c = $.trim(params.c);
+        cls = $.trim(params.c) || ("shape-" + type);
         var pack = Shape[type || "cube"](params, cls);
         if (!pack) {
             $("#code").empty();
@@ -143,9 +145,9 @@ $(document).ready(function () {
             css += "}"
         }
         boxdemo.show().css("padding", (params.v ? params.v : 100) + "px 0").html(html);
-        var transform = pack.transform || ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
+        pack.transform = pack.transform || ("rotateX(" + $("#rangex").val() + "deg) rotateY(" + $("#rangey").val() +
             "deg) rotateZ(" + $("#rangez").val() + "deg)");
         boxstyle.html(css);
-        boxstyle.next("style").html("." + cls + "{transform:" + transform + ";margin: 0 auto}");
+        boxstyle.next("style").html("." + cls + "{transform:" + pack.transform + ";margin: 0 auto}");
     }
 });

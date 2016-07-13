@@ -11,13 +11,13 @@ Create 3D CSS shapes below pretty easily：
 + cylinder 圆柱体
 + prism 棱柱 ![image](images/prism.png)
 + sphere 球体
-+ fan 扇叶
++ fan 扇叶 ![image](images/fan.png)
 + polyhedron 多面框 ![image](images/polyhedron.png)
 + ladder 梯
 + ......
 
 # how to use
 
-Just visit [Shape Ganerator Page](http://tt-cc.cn/css3-3d-shape-generator/).
+Just visit [Shape Ganerator Page](http://tt-cc.cn/web-app/css3-3d-shape-generator/).
 
 Maybe you need to tweak code slightly.

@@ -209,6 +209,7 @@ pre {
     transition: all 0.3s linear;
     position: relative;
     perspective: 1000px;
+    overflow: hidden;
 }
 
 #type .box-item .shape-text {

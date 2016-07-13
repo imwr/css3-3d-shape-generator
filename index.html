@@ -13,10 +13,10 @@
     <meta name="keywords" content="tt-cc"/>
     <meta name="description" content="tt-cc"/>
     <meta http-equiv="Cache-Control" content="no-transform "/>
-    <link rel="shortcut icon" href="http://imwr.github.io/resources/favicon.ico">
-    <link rel="bookmark" href="http://imwr.github.io/resources/favicon.ico">
+    <link rel="shortcut icon" href="http://tt-cc.cn/resources/favicon.ico">
+    <link rel="bookmark" href="http://tt-cc.cn/resources/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="http://tt-cc.cn/resources/css/normalize.css">
 
     <link rel="stylesheet" type="text/css" href="css/generator.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
@@ -52,7 +52,7 @@
             <div class="shape-text">多面框 Polyhedron</div>
         </div>
         <div class="box-item" data-type="pyramid">
-            <div class="shape-demo shape-pyramid-demo shape-demo1">
+            <div class="shape-demo shape-pyramid-demo">
                 <div class="tcface s0"></div>
                 <div class="tcface s1"></div>
                 <div class="tcface s2"></div>
@@ -60,13 +60,13 @@
             </div>
             <div class="shape-text">金字塔 Pyramid</div>
         </div>
-        <div class="box-item" data-type1="fan">
-            <div class="shape-demo shape-fan-demo">
-                <div class="tcface sleft"></div>
-                <div class="tcface sfront"></div>
-                <div class="tcface sbottom"></div>
-                <div class="tcface sright"></div>
-                <div class="tcface sback"></div>
+        <div class="box-item" data-type="fan" title="this can make amazing 3d shape">
+            <div class="shape-fan-demo shape-demo">
+                <div class="tcface s0"></div>
+                <div class="tcface s1"></div>
+                <div class="tcface s2"></div>
+                <div class="tcface s3"></div>
+                <div class="tcface s4"></div>
             </div>
             <div class="shape-text">扇叶 Fan-blade</div>
         </div>
@@ -92,7 +92,7 @@
             <div class="shape-text">阶梯 Ladder</div>
         </div>
         <div class="box-item" data-type="prism">
-            <div class="shape-demo shape-prism-demo shape-demo2">
+            <div class="shape-demo shape-prism-demo">
                 <div class="tcface sbottom"></div>
                 <div class="tcface sfront"></div>
                 <div class="tcface sback"></div>
@@ -114,17 +114,18 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Length:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Width:</label>
                 <input type="text" maxlength="6" name="h" placeholder="default 100..." class="control-content"
-                       oninput="this.value=this.value.replace(/[^\d|\,]/g,'')"/>
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Height:</label>
-                <input type="text" maxlength="6" name="v" placeholder="default 100..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="v" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
         </form>
         <form id="pyramid">
@@ -134,17 +135,18 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Length:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Height:</label>
-                <input type="text" maxlength="6" name="v" placeholder="default 100..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="v" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Face :</label>
-                <input type="text" maxlength="6" name="s" placeholder="Face，default 4..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="s" placeholder="Face，default 4..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
         </form>
         <form id="polyhedron">
@@ -154,17 +156,18 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Length:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Height:</label>
-                <input type="text" maxlength="6" name="v" placeholder="default 100..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="v" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Face :</label>
-                <input type="text" maxlength="6" name="s" placeholder="default 5..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="s" placeholder="default 5..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
         </form>
         <form id="fan">
@@ -174,25 +177,26 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Length:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Height:</label>
-                <input type="text" maxlength="6" name="v" placeholder="default 100..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="v" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Face :</label>
-                <input type="text" maxlength="6" name="s" placeholder="default 5..."
-                       class="control-content"/>
+                <input type="text" name="s" placeholder="default 5..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Angle:</label>
-                <input type="text" maxlength="6" name="a" placeholder="default 60deg..."
-                       class="control-content col-6"/>
-                <label class="control-toolbar">
-                    &nbsp;&nbsp;<input type="checkbox" maxlength="6" name="auto" class=""/>&nbsp;Auto Pyramid
-                </label>
+                <input type="text" maxlength="6" name="a" placeholder="default 60deg..." class="control-content col-6"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
+                <label class="control-label">Auto Pyramid:</label>
+                <label><input type="radio" name="auto" value="1" data-disable="a"/> Yes</label>
+                <label><input type="radio" name="auto" checked value="0" data-disable="a"/> No</label>
             </div>
         </form>
         <form id="sphere">
@@ -203,12 +207,13 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Diameter:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Face:</label>
-                <input type="text" max="180" name="s" placeholder="default 180..."
-                       class="control-content"/>
+                <input type="text" max="180" name="s" placeholder="default 180..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Random Color:</label>
@@ -225,16 +230,18 @@
             </div>
             <div class="col-12">
                 <label class="control-label">Outer Diameter:</label>
-                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"/>
+                <input type="text" maxlength="6" name="w" placeholder="default 200..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Inner Diameter:</label>
-                <input type="text" maxlength="6" name="sw" placeholder="default 160..." class="control-content"/>
+                <input type="text" maxlength="6" name="sw" placeholder="default 160..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
             <div class="col-12">
                 <label class="control-label">Face:</label>
-                <input type="text" maxlength="6" name="s" placeholder="default 100..."
-                       class="control-content"/>
+                <input type="text" maxlength="6" name="s" placeholder="default 100..." class="control-content"
+                       oninput="this.value=this.value.replace(/[^\d|\.]/g,'')"/>
             </div>
         </form>
         <div class="col-12">
@@ -272,14 +279,14 @@
         </div>
     </div>
 </section>
-<script type="text/javascript" src="http://imwr.github.io/resources/js/jquery-1.11.3.min.js"></script>
-<link rel="stylesheet" type="text/css" href="http://imwr.github.io/resources/rangeslider/rangeslider.css">
-<script type="text/javascript" src="http://imwr.github.io/resources/rangeslider/rangeslider.min.js"></script>
+<script type="text/javascript" src="http://tt-cc.cn/resources/js/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://tt-cc.cn/resources/rangeslider/rangeslider.css">
+<script type="text/javascript" src="http://tt-cc.cn/resources/rangeslider/rangeslider.min.js"></script>
 <script type="text/javascript" src="js/Shape.js"></script>
 <script type="text/javascript" src="js/generator.js"></script>
-<link type="text/css" rel="stylesheet" href="http://imwr.github.io/resources/syntax/shCoreDefault.css"/>
-<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shCore.js"></script>
-<script type="text/javascript" src="http://imwr.github.io/resources/syntax/shBrushJScriptAndXml.js"></script>
+<link type="text/css" rel="stylesheet" href="http://tt-cc.cn/resources/syntax/shCoreDefault.css"/>
+<script type="text/javascript" src="http://tt-cc.cn/resources/syntax/shCore.js"></script>
+<script type="text/javascript" src="http://tt-cc.cn/resources/syntax/shBrushJScriptAndXml.js"></script>
 <script>
     $(function () {
         // add google-analytics

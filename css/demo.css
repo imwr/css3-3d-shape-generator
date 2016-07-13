@@ -17,34 +17,6 @@
     }
 }
 
-.shape-demo1:hover {
-    animation: rotate1 2s linear 0.8s infinite;
-}
-
-.shape-demo1.animate {
-    animation: rotate1 2s linear infinite;
-}
-
-@keyframes rotate1 {
-    100% {
-        transform: rotateY(450deg);
-    }
-}
-
-.shape-demo2:hover {
-    animation: rotate2 2s linear 0.8s infinite;
-}
-
-.shape-demo2.animate {
-    animation: rotate2 2s linear infinite;
-}
-
-@keyframes rotate2 {
-    100% {
-        transform: rotateY(495deg);
-    }
-}
-
 .shape-cube-demo {
     width: 50px;
     height: 50px;
@@ -139,6 +111,20 @@
     transform: rotateY(324deg) translate3D(-50%, 0, 25px);
 }
 
+.shape-pyramid-demo:hover {
+    animation: shape-pyramid-demo 2s linear 0.8s infinite;
+}
+
+.shape-pyramid-demo.animate {
+    animation: shape-pyramid-demo 2s linear infinite;
+}
+
+@keyframes shape-pyramid-demo {
+    100% {
+        transform: rotateY(450deg);
+    }
+}
+
 .shape-pyramid-demo {
     width: 60px;
     height: 60px;
@@ -217,6 +203,20 @@
     transform: rotateY(324deg) rotateX(29.999999999999996deg) translate3D(-50%, 0, 0);
 }
 
+.shape-prism-demo:hover {
+    animation: shape-prism-demo 2s linear 0.8s infinite;
+}
+
+.shape-prism-demo.animate {
+    animation: shape-prism-demo 2s linear infinite;
+}
+
+@keyframes shape-prism-demo {
+    100% {
+        transform: rotateY(495deg);
+    }
+}
+
 .shape-prism-demo {
     width: 60px;
     height: 50px;
@@ -268,4 +268,62 @@
     transform: rotateX(90deg);
     background: #744dbf;
     top: 35px;
+}
+
+.shape-fan-demo:hover {
+    animation: shape-fan-demo 2s linear 0.8s infinite;
+}
+
+.shape-fan-demo.animate {
+    animation: shape-fan-demo 2s linear infinite;
+}
+
+@keyframes shape-fan-demo {
+    100% {
+        transform: rotateX(450deg);
+    }
+}
+
+.shape-fan-demo {
+    width: 36px;
+    height: 36px;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg);
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.shape-fan-demo .tcface {
+    transform-origin: 0 0;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    position: absolute;
+}
+
+.shape-fan-demo .s0 {
+    border-bottom: 36px solid #f775ae;
+    transform: rotateY(36deg) rotateX(60deg) translate3D(-50%, 0, 0);
+}
+
+.shape-fan-demo .s1 {
+    border-bottom: 36px solid #526e7d;
+    transform: rotateY(108deg) rotateX(60deg) translate3D(-50%, 0, 0);
+}
+
+.shape-fan-demo .s2 {
+    border-bottom: 36px solid #77b660;
+    transform: rotateY(180deg) rotateX(60deg) translate3D(-50%, 0, 0);
+}
+
+.shape-fan-demo .s3 {
+    border-bottom: 36px solid #052e98;
+    transform: rotateY(252deg) rotateX(60deg) translate3D(-50%, 0, 0);
+}
+
+.shape-fan-demo .s4 {
+    border-bottom: 36px solid #960c69;
+    transform: rotateY(324deg) rotateX(60deg) translate3D(-50%, 0, 0);
 }
