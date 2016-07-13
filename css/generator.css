@@ -3,8 +3,6 @@
     margin-top: 10px;
     margin-left: auto;
     background: white;
-    /*padding-left: 15px;*/
-    /*padding-right: 15px*/
 }
 
 @media (min-width: 768px) {
@@ -26,7 +24,7 @@
 }
 
 @media only screen and (max-width: 799px) {
-    .main-inner {
+    .container {
         width: 100%;
     }
 }
@@ -228,7 +226,6 @@ pre {
 }
 
 #content {
-    width: 100%;
     transition: all 0.3s linear;
     position: absolute;
     opacity: 0;
