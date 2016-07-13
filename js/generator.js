@@ -48,6 +48,11 @@ $(document).ready(function () {
             }, 300);
             form.hide();
         });
+    // 初始动画
+    typemenu.trigger("click");
+    setTimeout(function () {
+        typediv.find(".shape-demo").removeClass("animate");
+    }, 2000);
     $("form").on("input", "input", function () {
         if (this.name != "c") {
             this.value = this.value.replace(/[^\d|\.]/g, '');

@@ -83,7 +83,70 @@ var Shape = {
         return this.fan(params, cls);
     },
     cylinder: function () {},
-    prism: function () {},
+    prism: function (params, cls) {
+        var html = '<div class="' + cls + '">\n' +
+            '<div class="tcface sbottom"></div>\n' +
+            '<div class="tcface sfront"></div>\n' +
+            '    <div class="tcface sback"></div>\n' +
+            '   <div class="tcface sleft"></div>\n' +
+            '\t<div class="tcface sright"></div>\n' +
+            '</div>';
+        var c = "." + cls,
+            w = params.w || 100,
+            h = params.h || 100,
+            v = params.v || 100;
+        var angle = Math.atan(h / v / 2) * 180 / Math.PI, sidev = Math.sqrt(h * h / 4 + v * v);
+        var style = {};
+        style[c] = {
+            width: w + "px",
+            height: h + "px",
+            "transform-style": "preserve-3d"
+        };
+        style[c + " .tcface"] = {
+            width: "100%",
+            height: "100%",
+            position: "absolute"
+        };
+        style[c + " .sfront"] = {
+            height: sidev + "px",
+            "transform-origin": "50% 0",
+            background: randomColor(),
+            "transform": "rotateX(-" + angle + "deg)"
+        };
+        style[c + " .sback"] = {
+            height: sidev + "px",
+            "transform-origin": "50% 0",
+            background: randomColor(),
+            "transform": "rotateX(" + angle + "deg)"
+        };
+        style[c + " .sleft"] = {
+            width: 0,
+            height: 0,
+            "border-left": h / 2 + "px solid transparent",
+            "border-right": h / 2 + "px solid transparent",
+            "border-bottom": v + "px solid " + randomColor(),
+            transform: "rotateY(-90deg)",
+            left: -h / 2 + "px"
+        };
+        style[c + " .sright"] = {
+            width: 0,
+            height: 0,
+            "border-left": h / 2 + "px solid transparent",
+            "border-right": h / 2 + "px solid transparent",
+            "border-bottom": v + "px solid " + randomColor(),
+            transform: "rotateY(-90deg)",
+            left: (w - h / 2 ) + "px"
+        };
+        style[c + " .sbottom"] = {
+            transform: "rotateX(90deg)",
+            background: randomColor(),
+            top: (v - h / 2) + "px"
+        };
+        return {
+            style: style,
+            html: html
+        };
+    },
     sphere: function () {},
     fan: function (params, cls) {
         var c = "." + cls,

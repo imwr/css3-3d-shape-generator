@@ -9,7 +9,7 @@ Create 3D CSS shapes below pretty easily：
 + cube 立方体 ![image](images/cube.png)
 + pyramid 金字塔 ![image](images/pyramid.png)
 + cylinder 圆柱体
-+ prism 棱柱
++ prism 棱柱 ![image](images/prism.png)
 + sphere 球体
 + fan 扇叶
 + polyhedron 多面框 ![image](images/polyhedron.png)
