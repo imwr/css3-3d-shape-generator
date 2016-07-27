@@ -262,6 +262,8 @@ pre {
     transition: all 0.5s ease-in-out;
     background: white;
     margin-bottom: 10px;
+    max-height: 100%;
+    overflow-y: auto;
     /* border: 1px solid #e0dbdb; */
 }
 

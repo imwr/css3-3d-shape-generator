@@ -84,7 +84,47 @@ var Shape = {
         pack.transform = "rotateY(" + 360 / params.s + "deg)";
         return pack;
     },
-    cylinder: function () {},
+    cylinder: function (params, cls) {
+        var c = "." + cls,
+            w = params.w || 100,
+            sw = params.sw || 75,
+            side = params.s || 80;
+        if (sw > w) {
+            return alert("diameter inner < outer");
+        }
+        var html = '<div class="' + cls + '">\n';
+        for (var i = 0; i < side; i++) {
+            var lic = "s" + i;
+            html += '<div class="tcface ' + lic + '"></div>\n';
+        }
+        html += '</div>';
+        var style = {};
+        style[c] = {
+            width: w + "px",
+            height: w + "px",
+            "transform-style": "preserve-3d"
+        };
+        style[c + " .tcface"] = {
+            width: sw + "px",
+            height: sw + "px",
+            "box-sizing": "content-box",
+            border: (w - sw ) + "px solid red",
+            "border-radius": "50%",
+            position: "absolute"
+        };
+        for (var i = 0; side > i; i++) {
+            style[c + " .s" + i] = {
+                "transform": "translateZ(" + i + "px)"
+            };
+            if (i == 0 || i == side - 1) {
+                style[c + " .s" + i]["border-color"] = "blue"
+            }
+        }
+        return {
+            style: style,
+            html: html
+        };
+    },
     prism: function (params, cls) {
         var html = '<div class="' + cls + '">\n' +
             '<div class="tcface sbottom"></div>\n' +
@@ -149,7 +189,45 @@ var Shape = {
             html: html
         };
     },
-    sphere: function () {},
+    sphere: function (params, cls) {
+        var c = "." + cls,
+            w = params.w || 100,
+            color = params.rc,
+            side = params.s && params.s < 360 ? params.s : 180;
+        var html = '<div class="' + cls + '">\n';
+        for (var i = 0; i < side; i++) {
+            var lic = "s" + i;
+            html += '<div class="tcface ' + lic + '"></div>\n';
+        }
+        html += '</div>';
+        var style = {};
+        style[c] = {
+            width: w + "px",
+            height: w + "px",
+            "transform-style": "preserve-3d"
+        };
+        style[c + " .tcface"] = {
+            width: "100%",
+            height: "100%",
+            "border-radius": "50%",
+            position: "absolute"
+        };
+        if (!color) {
+            style[c + " .tcface"]['background'] = randomColor()
+        }
+        for (var i = 0; side > i; i++) {
+            style[c + " .s" + i] = {
+                "transform": "rotateY(" + 180 / side * (i + 1) + "deg)"
+            };
+            if (color) {
+                style[c + " .s" + i]['background'] = randomColor()
+            }
+        }
+        return {
+            style: style,
+            html: html
+        };
+    },
     fan: function (params, cls) {
         var c = "." + cls,
             w = params.w || 100,

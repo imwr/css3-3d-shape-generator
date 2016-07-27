@@ -327,3 +327,1150 @@
     border-bottom: 36px solid #960c69;
     transform: rotateY(324deg) rotateX(60deg) translate3D(-50%, 0, 0);
 }
+
+.shape-cylinder-demo {
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transform: rotateX(75deg) rotateZ(45deg);
+    position: relative;
+    top: 30px;
+}
+
+.shape-cylinder-demo .tcface {
+    width: 40px;
+    height: 40px;
+    box-sizing: content-box;
+    border: 10px solid red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.shape-cylinder-demo .s0 {
+    transform: translateZ(0px);
+    border-color: blue;
+}
+
+.shape-cylinder-demo .s1 {
+    transform: translateZ(1px);
+}
+
+.shape-cylinder-demo .s2 {
+    transform: translateZ(2px);
+}
+
+.shape-cylinder-demo .s3 {
+    transform: translateZ(3px);
+}
+
+.shape-cylinder-demo .s4 {
+    transform: translateZ(4px);
+}
+
+.shape-cylinder-demo .s5 {
+    transform: translateZ(5px);
+}
+
+.shape-cylinder-demo .s6 {
+    transform: translateZ(6px);
+}
+
+.shape-cylinder-demo .s7 {
+    transform: translateZ(7px);
+}
+
+.shape-cylinder-demo .s8 {
+    transform: translateZ(8px);
+}
+
+.shape-cylinder-demo .s9 {
+    transform: translateZ(9px);
+}
+
+.shape-cylinder-demo .s10 {
+    transform: translateZ(10px);
+}
+
+.shape-cylinder-demo .s11 {
+    transform: translateZ(11px);
+}
+
+.shape-cylinder-demo .s12 {
+    transform: translateZ(12px);
+}
+
+.shape-cylinder-demo .s13 {
+    transform: translateZ(13px);
+}
+
+.shape-cylinder-demo .s14 {
+    transform: translateZ(14px);
+}
+
+.shape-cylinder-demo .s15 {
+    transform: translateZ(15px);
+}
+
+.shape-cylinder-demo .s16 {
+    transform: translateZ(16px);
+}
+
+.shape-cylinder-demo .s17 {
+    transform: translateZ(17px);
+}
+
+.shape-cylinder-demo .s18 {
+    transform: translateZ(18px);
+}
+
+.shape-cylinder-demo .s19 {
+    transform: translateZ(19px);
+}
+
+.shape-cylinder-demo .s20 {
+    transform: translateZ(20px);
+}
+
+.shape-cylinder-demo .s21 {
+    transform: translateZ(21px);
+}
+
+.shape-cylinder-demo .s22 {
+    transform: translateZ(22px);
+}
+
+.shape-cylinder-demo .s23 {
+    transform: translateZ(23px);
+}
+
+.shape-cylinder-demo .s24 {
+    transform: translateZ(24px);
+}
+
+.shape-cylinder-demo .s25 {
+    transform: translateZ(25px);
+}
+
+.shape-cylinder-demo .s26 {
+    transform: translateZ(26px);
+}
+
+.shape-cylinder-demo .s27 {
+    transform: translateZ(27px);
+}
+
+.shape-cylinder-demo .s28 {
+    transform: translateZ(28px);
+}
+
+.shape-cylinder-demo .s29 {
+    transform: translateZ(29px);
+}
+
+.shape-cylinder-demo .s30 {
+    transform: translateZ(30px);
+}
+
+.shape-cylinder-demo .s31 {
+    transform: translateZ(31px);
+}
+
+.shape-cylinder-demo .s32 {
+    transform: translateZ(32px);
+}
+
+.shape-cylinder-demo .s33 {
+    transform: translateZ(33px);
+}
+
+.shape-cylinder-demo .s34 {
+    transform: translateZ(34px);
+}
+
+.shape-cylinder-demo .s35 {
+    transform: translateZ(35px);
+}
+
+.shape-cylinder-demo .s36 {
+    transform: translateZ(36px);
+}
+
+.shape-cylinder-demo .s37 {
+    transform: translateZ(37px);
+}
+
+.shape-cylinder-demo .s38 {
+    transform: translateZ(38px);
+}
+
+.shape-cylinder-demo .s39 {
+    transform: translateZ(39px);
+}
+
+.shape-cylinder-demo .s40 {
+    transform: translateZ(40px);
+}
+
+.shape-cylinder-demo .s41 {
+    transform: translateZ(41px);
+}
+
+.shape-cylinder-demo .s42 {
+    transform: translateZ(42px);
+}
+
+.shape-cylinder-demo .s43 {
+    transform: translateZ(43px);
+}
+
+.shape-cylinder-demo .s44 {
+    transform: translateZ(44px);
+}
+
+.shape-cylinder-demo .s45 {
+    transform: translateZ(45px);
+}
+
+.shape-cylinder-demo .s46 {
+    transform: translateZ(46px);
+}
+
+.shape-cylinder-demo .s47 {
+    transform: translateZ(47px);
+}
+
+.shape-cylinder-demo .s48 {
+    transform: translateZ(48px);
+}
+
+.shape-cylinder-demo .s49 {
+    transform: translateZ(49px);
+    border-color: blue;
+}
+
+.shape-cylinder-demo:hover {
+    animation: shape-cylinder-demo 2s linear 0.8s infinite;
+}
+
+.shape-cylinder-demo.animate {
+    animation: shape-cylinder-demo 2s linear infinite;
+}
+
+@keyframes shape-cylinder-demo {
+    100% {
+        transform: rotateX(435deg) rotateZ(45deg);
+    }
+}
+
+.shape-sphere-demo {
+    width: 70px;
+    height: 70px;
+    transform-style: preserve-3d;
+}
+
+.shape-sphere-demo .tcface {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.shape-sphere-demo .s0 {
+    transform: rotateY(1deg);
+    background: #ec42e1;
+}
+
+.shape-sphere-demo .s1 {
+    transform: rotateY(2deg);
+    background: #cd2093;
+}
+
+.shape-sphere-demo .s2 {
+    transform: rotateY(3deg);
+    background: #c7e3eb;
+}
+
+.shape-sphere-demo .s3 {
+    transform: rotateY(4deg);
+    background: #d7fbf7;
+}
+
+.shape-sphere-demo .s4 {
+    transform: rotateY(5deg);
+    background: #c2b6ee;
+}
+
+.shape-sphere-demo .s5 {
+    transform: rotateY(6deg);
+    background: #f29046;
+}
+
+.shape-sphere-demo .s6 {
+    transform: rotateY(7deg);
+    background: #4aa68b;
+}
+
+.shape-sphere-demo .s7 {
+    transform: rotateY(8deg);
+    background: #fe2bde;
+}
+
+.shape-sphere-demo .s8 {
+    transform: rotateY(9deg);
+    background: #abd06a;
+}
+
+.shape-sphere-demo .s9 {
+    transform: rotateY(10deg);
+    background: #e03436;
+}
+
+.shape-sphere-demo .s10 {
+    transform: rotateY(11deg);
+    background: #fcde66;
+}
+
+.shape-sphere-demo .s11 {
+    transform: rotateY(12deg);
+    background: #d49ab5;
+}
+
+.shape-sphere-demo .s12 {
+    transform: rotateY(13deg);
+    background: #2ece39;
+}
+
+.shape-sphere-demo .s13 {
+    transform: rotateY(14deg);
+    background: #b5e8ef;
+}
+
+.shape-sphere-demo .s14 {
+    transform: rotateY(15deg);
+    background: #3067cd;
+}
+
+.shape-sphere-demo .s15 {
+    transform: rotateY(16deg);
+    background: #086051;
+}
+
+.shape-sphere-demo .s16 {
+    transform: rotateY(17deg);
+    background: #b326ee;
+}
+
+.shape-sphere-demo .s17 {
+    transform: rotateY(18deg);
+    background: #f29561;
+}
+
+.shape-sphere-demo .s18 {
+    transform: rotateY(19deg);
+    background: #27ded2;
+}
+
+.shape-sphere-demo .s19 {
+    transform: rotateY(20deg);
+    background: #0c0555;
+}
+
+.shape-sphere-demo .s20 {
+    transform: rotateY(21deg);
+    background: #8468c0;
+}
+
+.shape-sphere-demo .s21 {
+    transform: rotateY(22deg);
+    background: #ca7dc0;
+}
+
+.shape-sphere-demo .s22 {
+    transform: rotateY(23deg);
+    background: #cbf580;
+}
+
+.shape-sphere-demo .s23 {
+    transform: rotateY(24deg);
+    background: #0ab42a;
+}
+
+.shape-sphere-demo .s24 {
+    transform: rotateY(25deg);
+    background: #62505a;
+}
+
+.shape-sphere-demo .s25 {
+    transform: rotateY(26deg);
+    background: #d14469;
+}
+
+.shape-sphere-demo .s26 {
+    transform: rotateY(27deg);
+    background: #dd52dd;
+}
+
+.shape-sphere-demo .s27 {
+    transform: rotateY(28deg);
+    background: #35b35e;
+}
+
+.shape-sphere-demo .s28 {
+    transform: rotateY(29deg);
+    background: #b3e83d;
+}
+
+.shape-sphere-demo .s29 {
+    transform: rotateY(30deg);
+    background: #320dc2;
+}
+
+.shape-sphere-demo .s30 {
+    transform: rotateY(31deg);
+    background: #edfbfc;
+}
+
+.shape-sphere-demo .s31 {
+    transform: rotateY(32deg);
+    background: #8f204b;
+}
+
+.shape-sphere-demo .s32 {
+    transform: rotateY(33deg);
+    background: #e2a62e;
+}
+
+.shape-sphere-demo .s33 {
+    transform: rotateY(34deg);
+    background: #3a4837;
+}
+
+.shape-sphere-demo .s34 {
+    transform: rotateY(35deg);
+    background: #ae80cc;
+}
+
+.shape-sphere-demo .s35 {
+    transform: rotateY(36deg);
+    background: #410ca6;
+}
+
+.shape-sphere-demo .s36 {
+    transform: rotateY(37deg);
+    background: #164f3c;
+}
+
+.shape-sphere-demo .s37 {
+    transform: rotateY(38deg);
+    background: #f3c8f8;
+}
+
+.shape-sphere-demo .s38 {
+    transform: rotateY(39deg);
+    background: #48e3bb;
+}
+
+.shape-sphere-demo .s39 {
+    transform: rotateY(40deg);
+    background: #257a67;
+}
+
+.shape-sphere-demo .s40 {
+    transform: rotateY(41deg);
+    background: #77a276;
+}
+
+.shape-sphere-demo .s41 {
+    transform: rotateY(42deg);
+    background: #adc39d;
+}
+
+.shape-sphere-demo .s42 {
+    transform: rotateY(43deg);
+    background: #3253c2;
+}
+
+.shape-sphere-demo .s43 {
+    transform: rotateY(44deg);
+    background: #ced007;
+}
+
+.shape-sphere-demo .s44 {
+    transform: rotateY(45deg);
+    background: #252f3a;
+}
+
+.shape-sphere-demo .s45 {
+    transform: rotateY(46deg);
+    background: #505482;
+}
+
+.shape-sphere-demo .s46 {
+    transform: rotateY(47deg);
+    background: #5b55e5;
+}
+
+.shape-sphere-demo .s47 {
+    transform: rotateY(48deg);
+    background: #b9767d;
+}
+
+.shape-sphere-demo .s48 {
+    transform: rotateY(49deg);
+    background: #d719ec;
+}
+
+.shape-sphere-demo .s49 {
+    transform: rotateY(50deg);
+    background: #3dd47c;
+}
+
+.shape-sphere-demo .s50 {
+    transform: rotateY(51deg);
+    background: #70f98e;
+}
+
+.shape-sphere-demo .s51 {
+    transform: rotateY(52deg);
+    background: #811ca6;
+}
+
+.shape-sphere-demo .s52 {
+    transform: rotateY(53deg);
+    background: #75f7c0;
+}
+
+.shape-sphere-demo .s53 {
+    transform: rotateY(54deg);
+    background: #86af39;
+}
+
+.shape-sphere-demo .s54 {
+    transform: rotateY(55deg);
+    background: #f18abe;
+}
+
+.shape-sphere-demo .s55 {
+    transform: rotateY(56deg);
+    background: #e843ca;
+}
+
+.shape-sphere-demo .s56 {
+    transform: rotateY(57deg);
+    background: #0c5606;
+}
+
+.shape-sphere-demo .s57 {
+    transform: rotateY(58deg);
+    background: #4fd5fa;
+}
+
+.shape-sphere-demo .s58 {
+    transform: rotateY(59deg);
+    background: #a33891;
+}
+
+.shape-sphere-demo .s59 {
+    transform: rotateY(60deg);
+    background: #a1449f;
+}
+
+.shape-sphere-demo .s60 {
+    transform: rotateY(61deg);
+    background: #e5986a;
+}
+
+.shape-sphere-demo .s61 {
+    transform: rotateY(62deg);
+    background: #0d3774;
+}
+
+.shape-sphere-demo .s62 {
+    transform: rotateY(63deg);
+    background: #35cbb8;
+}
+
+.shape-sphere-demo .s63 {
+    transform: rotateY(64deg);
+    background: #d11242;
+}
+
+.shape-sphere-demo .s64 {
+    transform: rotateY(65deg);
+    background: #4fdfe5;
+}
+
+.shape-sphere-demo .s65 {
+    transform: rotateY(66deg);
+    background: #fd1cfd;
+}
+
+.shape-sphere-demo .s66 {
+    transform: rotateY(67deg);
+    background: #34186c;
+}
+
+.shape-sphere-demo .s67 {
+    transform: rotateY(68deg);
+    background: #be2f73;
+}
+
+.shape-sphere-demo .s68 {
+    transform: rotateY(69deg);
+    background: #9bc741;
+}
+
+.shape-sphere-demo .s69 {
+    transform: rotateY(70deg);
+    background: #c8fa17;
+}
+
+.shape-sphere-demo .s70 {
+    transform: rotateY(71deg);
+    background: #ff61ce;
+}
+
+.shape-sphere-demo .s71 {
+    transform: rotateY(72deg);
+    background: #234d1d;
+}
+
+.shape-sphere-demo .s72 {
+    transform: rotateY(73deg);
+    background: #5ab977;
+}
+
+.shape-sphere-demo .s73 {
+    transform: rotateY(74deg);
+    background: #bc2c7e;
+}
+
+.shape-sphere-demo .s74 {
+    transform: rotateY(75deg);
+    background: #752abf;
+}
+
+.shape-sphere-demo .s75 {
+    transform: rotateY(76deg);
+    background: #9558f7;
+}
+
+.shape-sphere-demo .s76 {
+    transform: rotateY(77deg);
+    background: #e1baf6;
+}
+
+.shape-sphere-demo .s77 {
+    transform: rotateY(78deg);
+    background: #b9f68c;
+}
+
+.shape-sphere-demo .s78 {
+    transform: rotateY(79deg);
+    background: #41cb94;
+}
+
+.shape-sphere-demo .s79 {
+    transform: rotateY(80deg);
+    background: #8fcbfa;
+}
+
+.shape-sphere-demo .s80 {
+    transform: rotateY(81deg);
+    background: #cc2192;
+}
+
+.shape-sphere-demo .s81 {
+    transform: rotateY(82deg);
+    background: #5d5917;
+}
+
+.shape-sphere-demo .s82 {
+    transform: rotateY(83deg);
+    background: #6bcf0a;
+}
+
+.shape-sphere-demo .s83 {
+    transform: rotateY(84deg);
+    background: #6f8f60;
+}
+
+.shape-sphere-demo .s84 {
+    transform: rotateY(85deg);
+    background: #28d281;
+}
+
+.shape-sphere-demo .s85 {
+    transform: rotateY(86deg);
+    background: #591070;
+}
+
+.shape-sphere-demo .s86 {
+    transform: rotateY(87deg);
+    background: #79f5a4;
+}
+
+.shape-sphere-demo .s87 {
+    transform: rotateY(88deg);
+    background: #1e5a20;
+}
+
+.shape-sphere-demo .s88 {
+    transform: rotateY(89deg);
+    background: #b76df3;
+}
+
+.shape-sphere-demo .s89 {
+    transform: rotateY(90deg);
+    background: #4a811d;
+}
+
+.shape-sphere-demo .s90 {
+    transform: rotateY(91deg);
+    background: #ea79af;
+}
+
+.shape-sphere-demo .s91 {
+    transform: rotateY(92deg);
+    background: #4792b1;
+}
+
+.shape-sphere-demo .s92 {
+    transform: rotateY(93deg);
+    background: #0ce67f;
+}
+
+.shape-sphere-demo .s93 {
+    transform: rotateY(94deg);
+    background: #e782ea;
+}
+
+.shape-sphere-demo .s94 {
+    transform: rotateY(95deg);
+    background: #5d6318;
+}
+
+.shape-sphere-demo .s95 {
+    transform: rotateY(96deg);
+    background: #aba88f;
+}
+
+.shape-sphere-demo .s96 {
+    transform: rotateY(97deg);
+    background: #8e1403;
+}
+
+.shape-sphere-demo .s97 {
+    transform: rotateY(98deg);
+    background: #336973;
+}
+
+.shape-sphere-demo .s98 {
+    transform: rotateY(99deg);
+    background: #bd0e05;
+}
+
+.shape-sphere-demo .s99 {
+    transform: rotateY(100deg);
+    background: #e5ad89;
+}
+
+.shape-sphere-demo .s100 {
+    transform: rotateY(101deg);
+    background: #e19457;
+}
+
+.shape-sphere-demo .s101 {
+    transform: rotateY(102deg);
+    background: #918402;
+}
+
+.shape-sphere-demo .s102 {
+    transform: rotateY(103deg);
+    background: #b58f35;
+}
+
+.shape-sphere-demo .s103 {
+    transform: rotateY(104deg);
+    background: #37aedd;
+}
+
+.shape-sphere-demo .s104 {
+    transform: rotateY(105deg);
+    background: #e41900;
+}
+
+.shape-sphere-demo .s105 {
+    transform: rotateY(106deg);
+    background: #b4a47f;
+}
+
+.shape-sphere-demo .s106 {
+    transform: rotateY(107deg);
+    background: #7cfb44;
+}
+
+.shape-sphere-demo .s107 {
+    transform: rotateY(108deg);
+    background: #4d7444;
+}
+
+.shape-sphere-demo .s108 {
+    transform: rotateY(109deg);
+    background: #b83a5c;
+}
+
+.shape-sphere-demo .s109 {
+    transform: rotateY(110deg);
+    background: #27b3c6;
+}
+
+.shape-sphere-demo .s110 {
+    transform: rotateY(111deg);
+    background: #b8b939;
+}
+
+.shape-sphere-demo .s111 {
+    transform: rotateY(112deg);
+    background: #f79724;
+}
+
+.shape-sphere-demo .s112 {
+    transform: rotateY(113deg);
+    background: #d22d9b;
+}
+
+.shape-sphere-demo .s113 {
+    transform: rotateY(114deg);
+    background: #78a37c;
+}
+
+.shape-sphere-demo .s114 {
+    transform: rotateY(115deg);
+    background: #0ccd08;
+}
+
+.shape-sphere-demo .s115 {
+    transform: rotateY(116deg);
+    background: #f14073;
+}
+
+.shape-sphere-demo .s116 {
+    transform: rotateY(117deg);
+    background: #975bc9;
+}
+
+.shape-sphere-demo .s117 {
+    transform: rotateY(118deg);
+    background: #afa681;
+}
+
+.shape-sphere-demo .s118 {
+    transform: rotateY(119deg);
+    background: #5501ba;
+}
+
+.shape-sphere-demo .s119 {
+    transform: rotateY(120deg);
+    background: #da3099;
+}
+
+.shape-sphere-demo .s120 {
+    transform: rotateY(121deg);
+    background: #77656b;
+}
+
+.shape-sphere-demo .s121 {
+    transform: rotateY(122deg);
+    background: #43b9b4;
+}
+
+.shape-sphere-demo .s122 {
+    transform: rotateY(123deg);
+    background: #ada1b3;
+}
+
+.shape-sphere-demo .s123 {
+    transform: rotateY(124deg);
+    background: #ed64d4;
+}
+
+.shape-sphere-demo .s124 {
+    transform: rotateY(125deg);
+    background: #f3373f;
+}
+
+.shape-sphere-demo .s125 {
+    transform: rotateY(126deg);
+    background: #0784c7;
+}
+
+.shape-sphere-demo .s126 {
+    transform: rotateY(127deg);
+    background: #87d27f;
+}
+
+.shape-sphere-demo .s127 {
+    transform: rotateY(128deg);
+    background: #b765fe;
+}
+
+.shape-sphere-demo .s128 {
+    transform: rotateY(129deg);
+    background: #9e6efd;
+}
+
+.shape-sphere-demo .s129 {
+    transform: rotateY(130deg);
+    background: #33c4b4;
+}
+
+.shape-sphere-demo .s130 {
+    transform: rotateY(131deg);
+    background: #365ec9;
+}
+
+.shape-sphere-demo .s131 {
+    transform: rotateY(132deg);
+    background: #7ffe70;
+}
+
+.shape-sphere-demo .s132 {
+    transform: rotateY(133deg);
+    background: #ac1744;
+}
+
+.shape-sphere-demo .s133 {
+    transform: rotateY(134deg);
+    background: #04addc;
+}
+
+.shape-sphere-demo .s134 {
+    transform: rotateY(135deg);
+    background: #664c4c;
+}
+
+.shape-sphere-demo .s135 {
+    transform: rotateY(136deg);
+    background: #8ffdf9;
+}
+
+.shape-sphere-demo .s136 {
+    transform: rotateY(137deg);
+    background: #49c5fd;
+}
+
+.shape-sphere-demo .s137 {
+    transform: rotateY(138deg);
+    background: #7aead2;
+}
+
+.shape-sphere-demo .s138 {
+    transform: rotateY(139deg);
+    background: #a135b8;
+}
+
+.shape-sphere-demo .s139 {
+    transform: rotateY(140deg);
+    background: #eb3b55;
+}
+
+.shape-sphere-demo .s140 {
+    transform: rotateY(141deg);
+    background: #cb9fb5;
+}
+
+.shape-sphere-demo .s141 {
+    transform: rotateY(142deg);
+    background: #f46ed5;
+}
+
+.shape-sphere-demo .s142 {
+    transform: rotateY(143deg);
+    background: #c6de86;
+}
+
+.shape-sphere-demo .s143 {
+    transform: rotateY(144deg);
+    background: #9654b0;
+}
+
+.shape-sphere-demo .s144 {
+    transform: rotateY(145deg);
+    background: #40b9c3;
+}
+
+.shape-sphere-demo .s145 {
+    transform: rotateY(146deg);
+    background: #f71dcb;
+}
+
+.shape-sphere-demo .s146 {
+    transform: rotateY(147deg);
+    background: #6721a3;
+}
+
+.shape-sphere-demo .s147 {
+    transform: rotateY(148deg);
+    background: #d4c279;
+}
+
+.shape-sphere-demo .s148 {
+    transform: rotateY(149deg);
+    background: #4be80c;
+}
+
+.shape-sphere-demo .s149 {
+    transform: rotateY(150deg);
+    background: #31e7ce;
+}
+
+.shape-sphere-demo .s150 {
+    transform: rotateY(151deg);
+    background: #4fbf8a;
+}
+
+.shape-sphere-demo .s151 {
+    transform: rotateY(152deg);
+    background: #872728;
+}
+
+.shape-sphere-demo .s152 {
+    transform: rotateY(153deg);
+    background: #a2d112;
+}
+
+.shape-sphere-demo .s153 {
+    transform: rotateY(154deg);
+    background: #0d2a15;
+}
+
+.shape-sphere-demo .s154 {
+    transform: rotateY(155deg);
+    background: #5f71b1;
+}
+
+.shape-sphere-demo .s155 {
+    transform: rotateY(156deg);
+    background: #e846ca;
+}
+
+.shape-sphere-demo .s156 {
+    transform: rotateY(157deg);
+    background: #273c7f;
+}
+
+.shape-sphere-demo .s157 {
+    transform: rotateY(158deg);
+    background: #278327;
+}
+
+.shape-sphere-demo .s158 {
+    transform: rotateY(159deg);
+    background: #c67d90;
+}
+
+.shape-sphere-demo .s159 {
+    transform: rotateY(160deg);
+    background: #2270ec;
+}
+
+.shape-sphere-demo .s160 {
+    transform: rotateY(161deg);
+    background: #b0edf8;
+}
+
+.shape-sphere-demo .s161 {
+    transform: rotateY(162deg);
+    background: #cc0a8a;
+}
+
+.shape-sphere-demo .s162 {
+    transform: rotateY(163deg);
+    background: #f280fc;
+}
+
+.shape-sphere-demo .s163 {
+    transform: rotateY(164deg);
+    background: #8fc5b3;
+}
+
+.shape-sphere-demo .s164 {
+    transform: rotateY(165deg);
+    background: #74eafb;
+}
+
+.shape-sphere-demo .s165 {
+    transform: rotateY(166deg);
+    background: #a32562;
+}
+
+.shape-sphere-demo .s166 {
+    transform: rotateY(167deg);
+    background: #16c306;
+}
+
+.shape-sphere-demo .s167 {
+    transform: rotateY(168deg);
+    background: #4b1cbe;
+}
+
+.shape-sphere-demo .s168 {
+    transform: rotateY(169deg);
+    background: #d95f38;
+}
+
+.shape-sphere-demo .s169 {
+    transform: rotateY(170deg);
+    background: #7f62f2;
+}
+
+.shape-sphere-demo .s170 {
+    transform: rotateY(171deg);
+    background: #e22344;
+}
+
+.shape-sphere-demo .s171 {
+    transform: rotateY(172deg);
+    background: #c0cf07;
+}
+
+.shape-sphere-demo .s172 {
+    transform: rotateY(173deg);
+    background: #db4dcd;
+}
+
+.shape-sphere-demo .s173 {
+    transform: rotateY(174deg);
+    background: #2d6ff9;
+}
+
+.shape-sphere-demo .s174 {
+    transform: rotateY(175deg);
+    background: #ad4898;
+}
+
+.shape-sphere-demo .s175 {
+    transform: rotateY(176deg);
+    background: #55b1ab;
+}
+
+.shape-sphere-demo .s176 {
+    transform: rotateY(177deg);
+    background: #0fd42a;
+}
+
+.shape-sphere-demo .s177 {
+    transform: rotateY(178deg);
+    background: #be78d3;
+}
+
+.shape-sphere-demo .s178 {
+    transform: rotateY(179deg);
+    background: #7de5a3;
+}
+
+.shape-sphere-demo .s179 {
+    transform: rotateY(180deg);
+    background: #b7cadc;
+}

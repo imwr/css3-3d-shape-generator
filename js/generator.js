@@ -63,13 +63,7 @@ $(document).ready(function () {
             dopackage();
             clearTimeout(timeout);
         }, 500);
-    }).on("change", "select", function () {
-        clearTimeout(timeout);
-        timeout = setTimeout(function () {
-            dopackage();
-            clearTimeout(timeout);
-        }, 500);
-    }).on("click", "[name=auto]", function () {
+    }).on("click", "input[type=radio]", function () {
         var disable = this.getAttribute('data-disable');
         if (this.value * 1) {
             $(this).parent().find("[name=" + disable + "]").attr("disabled", "disabled")
@@ -130,7 +124,6 @@ $(document).ready(function () {
         cls = $.trim(params.c) || ("shape-" + type);
         var pack = Shape[type || "cube"](params, cls);
         if (!pack) {
-            $("#code").empty();
             return;
         }
         html = pack.html;
