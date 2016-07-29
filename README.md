@@ -18,6 +18,6 @@ Create 3D CSS shapes below pretty easily：
 
 # how to use
 
-Just visit [Shape Ganerator Page](http://tt-cc.cn/web-app/css3-3d-shape-generator/).
+Just visit [Shape Ganerator Page](http://tt-cc.cc/web-app/css3-3d-shape-generator/).
 
 Maybe you need to tweak code slightly.
